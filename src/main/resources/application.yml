@@ -1,0 +1,19 @@
+### local ###
+
+spring:
+  profiles:
+    active: "local"
+  datasource:
+    url: jdbc:mysql://localhost:3306/toypoy?serverTimezone=UTC&characterEncoding=UTF-8
+    username: root
+    password: admin
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+
+mybatis:
+  type-aliases-package:
+  mapper-locations: mybatis/mapper/**/*.xml
+
