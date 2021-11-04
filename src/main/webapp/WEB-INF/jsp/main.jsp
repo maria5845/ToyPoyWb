@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: blueh
-  Date: 2021-11-03
-  Time: 오후 4:49
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -393,6 +386,7 @@
 </footer>
 </body>
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="static/common/jquery-3.4.1.min.js"></script>
 <script>
     var swiper01 = new Swiper("#mainSlide .mySwiper", {
         pagination: {
@@ -416,7 +410,5 @@
             prevEl: ".swiper-button-prev",
         },
     });
-
-
 </script>
 </html>
