@@ -20,17 +20,8 @@ public class MainController {
 
     @RequestMapping(value = "/main.do", method = RequestMethod.GET)
     public String Main(Model model) {
-
-        logger.info("INFO SUCCESS");
-        logger.debug("DEBUG SUCCESS");
-        logger.error("ERROR SUCCESS");
-
         model.addAttribute("time", mainService.timeToString());
         return "index";
     }
-
-
-
-
 
 }
