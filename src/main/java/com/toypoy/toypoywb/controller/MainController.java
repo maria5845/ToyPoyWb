@@ -21,7 +21,7 @@ public class MainController {
     @RequestMapping(value = "/main.do", method = RequestMethod.GET)
     public String Main(Model model) {
         model.addAttribute("time", mainService.timeToString());
-        return "index";
+        return "main";
     }
 
 }

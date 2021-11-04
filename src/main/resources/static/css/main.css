@@ -1,0 +1,167 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+:root {
+    --yellow: #F5dF4D;
+    --lyellow: #fdfdf2;
+    --gray: #939597;
+    /* --lgray: #eee; */
+    --lgray: #f2f2f2;
+}
+body {  min-width: 1260px;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: #000;
+    word-break: break-all;}
+a {text-decoration: none; color: inherit;}
+img {width: 100%;}
+.clear:after{content: '';display: block; clear: both;}
+.blind { position: absolute; width: 1px; height: 1px; clip: rect(0 0 0 0); overflow: hidden; }
+.badge_best {display:block; position: absolute; top: 0; right: 0; width: 40px; height: 40px; line-height: 40px; background: var(--yellow); color: #fff; text-align: center;}
+.fb {font-weight: 600;}
+
+/* 공통 */
+h2.tit {font-size: 30px; line-height: 40px;}
+.pd_name { font-size: 16px; padding: 16px 0 30px;}
+.pd_price { font-size: 22px; font-weight: 600;}
+.add_cart {position:absolute; display:block; width: 30px; height: 30px; bottom:0; right:10px; background: url(../img/btnCart.png);}
+a.more_view {display:block; width: 114px; height: 34px; line-height: 34px; text-align: center; border: 1px solid #939597; background: #fff; color: #939597;}
+
+/* header */
+header {width: 1200px; margin: 30px auto;}
+header .logo {float: left;}
+header .search_wrap {position:relative; float:left; line-height: 75px; margin-left: 240px;width: 320px; height: 32px; border-radius: 25px; border: 1px solid gray; background-color: #fff;}
+header .search_wrap #srch_bar {border: none; background: none; width:240px; height: 26px; position: absolute; top: 3px; left: 10px;}
+header .search_wrap .btn_srch {border: none; background: none; position: absolute; top: 50%; right: 5px; transform: translateY(-50%);}
+header .myMenu {float: right;}
+header .myMenu ul li{float: left; padding: 14px; position: relative;}
+header .myMenu ul li~li::before{content: ''; display: block; width: 1px; height: 10px; background: var(--lgray); position: absolute; top: 50%; left: 2px; transform: translateY(-50%);}
+
+/* nav */
+nav {width: 1200px; height: 50px; margin: 0 auto;}
+nav .gnb li {float: left; font-size: 20px; padding: 0 20px;}
+
+/* mainSlide */
+#mainSlide .swiper {width:100%; height: 410px;}
+#mainSlide .swiper-slide {
+    text-align: center;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+#mainSlide .swiper-slide img {display: block; width: 100%; height: 100%; object-fit: cover;}
+/* mainRecom */
+#mainRecom {width: 1200px; margin: 80px auto 40px;}
+#mainRecom .tit {padding-bottom: 32px;}
+#mainRecom ul li {position: relative; float: left; width: 280px; margin-right: 16px;}
+#mainRecom ul li:last-child {margin-right: 0;}
+#mainRecom ul li a img {width:100%; background:var(--lgray);}
+
+/* mainSale */
+#mainSale {width: 100%; height: 570px; background:var(--lgray); padding: 80px 0; margin: 80px 0 85px; box-sizing: border-box;}
+#mainSale .sale_wrap {width: 1200px; margin: 0 auto;}
+#mainSale .sale_wrap .sale_title {float: left;}
+#mainSale .sale_wrap .sale_title h2::after {content: ''; display: block; width: 30px; height: 2px; background: var(--yellow); margin-top: 26px;}
+#mainSale .sale_wrap .sale_title p {font-size: 20px; padding: 25px 0 30px;}
+#mainSale .sale_wrap .sale_item {float: right;}
+#mainSale .sale_wrap .sale_item .swiper {width: 900px; height: 410px;}
+#mainSale .sale_wrap .sale_item .swiper-slide {
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+#mainSale .sale_wrap .sale_item .swiper-slide img {display: block; width: 100%; height: 100%;object-fit: cover;}
+#mainSale .sale_wrap .sale_item .add_cart {bottom:20px; right:20px;}
+
+/* mainNew */
+#mainNew {width: 1200px; height: 600px; margin: 0 auto; position: relative;}
+#mainNew .more_view {position:absolute; right: 0; top: 40px;}
+#mainNew .new_ob ul {overflow: hidden; position: relative; height: 504px; padding: 5px 0 20px 592px; border-bottom: 1px solid #F5dF4D;}
+#mainNew .new_ob li:first-child{position: absolute; left: 0; top: 27px; width: 591px; margin: 0;}
+#mainNew .new_ob li:first-child dt {font-size: 20px; font-weight: 500; padding: 4px 0;}
+#mainNew .new_ob li{float: left; width: 288px; margin: 22px 0 0 16px;}
+#mainNew .new_ob li dt {font-weight: bold;}
+
+/* mainUser */
+#mainUser {width: 100%; height: 570px; background: var(--lyellow); padding: 80px 0; margin: 80px 0 85px; box-sizing: border-box;}
+#mainUser .user_wrap {width: 1200px; margin: 0 auto;}
+#mainUser .user_title {float: left;}
+#mainUser .user_title h2::after {content: ''; display: block; width: 30px; height: 2px; background:var(--gray); margin-top: 26px;}
+#mainUser .user_title p {font-size: 20px; padding: 25px 0 30px;}
+#mainUser .user_item {float: right;}
+#mainUser .user_item .swiper {width: 900px; height: 410px;}
+#mainUser .user_item .swiper-slide {
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+#mainUser .user_item .swiper-slide img {display: block; width: 100%; height: 100%;object-fit: cover;}
+#mainUser .user_item .add_cart {bottom:20px; right:20px;}
+
+/* mainHot */
+#mainHot {width: 1200px; height: 650px; margin: 0 auto;}
+#mainHot .hot_tab ul{width:760px; margin: 35px auto 40px;}
+#mainHot .hot_tab li{position:relative; float:left; width: 140px; height: 140px;text-align: center; box-sizing: border-box;}
+#mainHot .hot_tab li:hover, #mainHot .hot_tab li:active, #mainHot .hot_tab li.active{border: 1px solid #F5dF4D;}
+#mainHot .hot_tab li~li {margin-left: 15px;}
+#mainHot .hot_tab li>a {display: block; width: 100%; height: 100%;}
+#mainHot .hot_tab span {position: relative; top: 94px;}
+#mainHot .hot_tab span::before {content: ''; display: block; width: 62px; height: 62px; background: url(../img/1628260214724.png) no-repeat 0 0 / cover; position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);}
+#mainHot .hot_pd ul li {position: relative; float: left; width: 280px; margin-right: 16px;}
+#mainHot .hot_pd ul li:last-child {margin-right: 0;}
+#mainHot .hot_pd ul li a img {width:100%; background: var(--lgray);}
+
+/* mainReview */
+#mainReview {width: 100%; height: 400px; background: var(--lgray);}
+#mainReview .review_wrap {width: 1200px; margin: 80px auto 90px; padding: 80px 0;}
+#mainReview .review_tit {float: left;}
+#mainReview .review_tit h2::after {content: ''; display: block; width: 30px; height: 2px; background: var(--yellow); margin-top: 26px;}
+#mainReview .review_tit p {font-size: 20px; padding: 25px 0 30px;}
+#mainReview .review_txt {float: right;}
+#mainReview .review_txt ul li {float:left; width: 250px; height: 230px; background: #fff; padding: 30px 15px;}
+#mainReview .review_txt ul li~li {margin-left: 15px;}
+#mainReview .review_txt ul li strong{font-size: 18px;}
+#mainReview .review_txt ul li div.re_txt{font-size: 13px; padding: 60px 0 20px;}
+
+/* mainNotice */
+#mainNotice {width: 1200px; margin: 0 auto;}
+#mainNotice > div {float: left;}
+
+/* footer */
+footer {width: 100%; height: 80px; background: var(--gray);}
+
