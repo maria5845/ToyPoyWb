@@ -162,7 +162,7 @@
         <div class="new_ob">
             <ul>
                 <li>
-                    <a href="#">
+                    <a id="test">
                         <img src="static/images/1632812494755.jpg" alt="치약" />
                         <dl>
                             <dt>솔잎향으로 개운함이 오래오래 '물사랑 상쾌한치약'</dt>
@@ -386,8 +386,21 @@
 </footer>
 </body>
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-<script src="static/common/jquery-3.4.1.min.js"></script>
+<script src="static/common/jquery-3.6.0.min.js"></script>
 <script>
+
+
+
+
+
+
+
+
+
+
+
+
+    /* 슬라이드 함수 */
     var swiper01 = new Swiper("#mainSlide .mySwiper", {
         pagination: {
             el: ".swiper-pagination",
@@ -410,5 +423,7 @@
             prevEl: ".swiper-button-prev",
         },
     });
+
+
 </script>
 </html>
