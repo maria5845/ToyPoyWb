@@ -1,19 +1,26 @@
-### local ###
 
+### local ###
 spring:
   profiles:
     active: "local"
   datasource:
-    url: jdbc:mysql://localhost:3306/toypoy?serverTimezone=UTC&characterEncoding=UTF-8
+    url: jdbc:log4jdbc:mysql://localhost:3306/toypoy?serverTimezone=UTC&characterEncoding=UTF-8
     username: root
     password: admin
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
   mvc:
     view:
       prefix: /WEB-INF/jsp/
       suffix: .jsp
+    static-path-pattern: /static/**
+  web:
+    resources:
+      static-locations: /static/
+      add-mappings: true
 
 mybatis:
   type-aliases-package:
   mapper-locations: mybatis/mapper/**/*.xml
 
+logging:
+  config: classpath:log4j2.yml
