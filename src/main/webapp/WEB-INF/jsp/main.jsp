@@ -19,13 +19,13 @@
 </head>
 <body>
 <header class="clear">
-    <h1 class="logo"><img src="img/logo_tem.png" alt="gymtem" /></h1>
+    <h1 class="logo"><img src="static/images/logo_tem.png" alt="gymtem" /></h1>
     <div class="search_wrap">
         <fieldset>
             <legend>검색영역</legend>
             <label for="search_bar" class="blind">검색</label>
             <input type="text" id="srch_bar" placeholder="검색어를 입력하세요."/>
-            <button type="submit" class="btn_srch"><img src="img/btnSearch.png" alt="검색"></button>
+            <button type="submit" class="btn_srch"><img src="static/images/btnSearch.png" alt="검색"></button>
         </fieldset>
     </div>
     <div class="myMenu">
@@ -51,9 +51,9 @@
     <section id="mainSlide">
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="img/1635724603738.jpg" alt="이번트"/></div>
-                <div class="swiper-slide"><img src="img/1635387609532.jpg" alt="이번트"/></div>
-                <div class="swiper-slide"><img src="img/1635387260159.jpg" alt="이번트"/></div>
+                <div class="swiper-slide"><img src="static/images/1635724603738.jpg" alt="이번트"/></div>
+                <div class="swiper-slide"><img src="static/images/1635387609532.jpg" alt="이번트"/></div>
+                <div class="swiper-slide"><img src="static/images/1635387260159.jpg" alt="이번트"/></div>
             </div>
             <div class="swiper-pagination"></div>
             <div class="swiper-button-prev"></div>
@@ -65,7 +65,7 @@
         <ul class="clear">
             <li>
                 <a href="#" class="img_wrap">
-                    <img src="img/051106023_1_300.png" alt="상추"/>
+                    <img src="static/images/051106023_1_300.png" alt="상추"/>
                 </a>
                 <div class="txt_wrap">
                     <span class="badge_best">인기</span>
@@ -76,7 +76,7 @@
             </li>
             <li>
                 <a href="#" class="img_wrap">
-                    <img src="img/051106023_1_300.png" alt="상추"/>
+                    <img src="static/images/051106023_1_300.png" alt="상추"/>
                 </a>
                 <div class="txt_wrap">
                     <span class="badge_best">인기</span>
@@ -87,7 +87,7 @@
             </li>
             <li>
                 <a href="#" class="img_wrap">
-                    <img src="img/051106023_1_300.png" alt="상추"/>
+                    <img src="static/images/051106023_1_300.png" alt="상추"/>
                 </a>
                 <div class="txt_wrap">
                     <span class="badge_best">인기</span>
@@ -98,7 +98,7 @@
             </li>
             <li>
                 <a href="#" class="img_wrap">
-                    <img src="img/051106023_1_300.png" alt="상추"/>
+                    <img src="static/images/051106023_1_300.png" alt="상추"/>
                 </a>
                 <div class="txt_wrap">
                     <span class="badge_best">인기</span>
@@ -121,7 +121,7 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <a href="#" class="img_wrap">
-                                <img src="img/130502035_1_300.jpg" alt="동백꽃 수분쿠션"/>
+                                <img src="static/images/130502035_1_300.jpg" alt="동백꽃 수분쿠션"/>
                             </a>
                             <div class="txt_wrap">
                                 <!-- <span class="badge_best">인기</span> -->
@@ -132,7 +132,7 @@
                         </div>
                         <div class="swiper-slide">
                             <a href="#" class="img_wrap">
-                                <img src="img/130502035_1_300.jpg" alt="동백꽃 수분쿠션"/>
+                                <img src="static/images/130502035_1_300.jpg" alt="동백꽃 수분쿠션"/>
                             </a>
                             <div class="txt_wrap">
                                 <!-- <span class="badge_best">인기</span> -->
@@ -143,7 +143,7 @@
                         </div>
                         <div class="swiper-slide">
                             <a href="#" class="img_wrap">
-                                <img src="img/130502035_1_300.jpg" alt="동백꽃 수분쿠션"/>
+                                <img src="static/images/130502035_1_300.jpg" alt="동백꽃 수분쿠션"/>
                             </a>
                             <div class="txt_wrap">
                                 <!-- <span class="badge_best">인기</span> -->
@@ -170,7 +170,7 @@
             <ul>
                 <li>
                     <a href="#">
-                        <img src="img/1632812494755.jpg" alt="치약" />
+                        <img src="static/images/1632812494755.jpg" alt="치약" />
                         <dl>
                             <dt>솔잎향으로 개운함이 오래오래 '물사랑 상쾌한치약'</dt>
                             <dd>솔잎, 녹차 등 식물유래 성분으로 순하고 상쾌하게!</dd>
@@ -179,7 +179,7 @@
                 </li>
                 <li>
                     <a href="#">
-                        <img src="img/1632812494755.jpg" alt="치약" />
+                        <img src="static/images/1632812494755.jpg" alt="치약" />
                         <dl>
                             <dt>물사랑 상쾌한치약</dt>
                             <!-- <dd>솔잎, 녹차 등 식물유래 성분으로 순하고 상쾌하게!</dd> -->
@@ -188,7 +188,7 @@
                 </li>
                 <li>
                     <a href="#">
-                        <img src="img/1632812494755.jpg" alt="치약" />
+                        <img src="static/images/1632812494755.jpg" alt="치약" />
                         <dl>
                             <dt>물사랑 상쾌한치약</dt>
                             <!-- <dd>솔잎, 녹차 등 식물유래 성분으로 순하고 상쾌하게!</dd> -->
@@ -197,7 +197,7 @@
                 </li>
                 <li>
                     <a href="#">
-                        <img src="img/1632812494755.jpg" alt="치약" />
+                        <img src="static/images/1632812494755.jpg" alt="치약" />
                         <dl>
                             <dt>물사랑 상쾌한치약</dt>
                             <!-- <dd>솔잎, 녹차 등 식물유래 성분으로 순하고 상쾌하게!</dd> -->
@@ -206,7 +206,7 @@
                 </li>
                 <li>
                     <a href="#">
-                        <img src="img/1632812494755.jpg" alt="치약" />
+                        <img src="static/images/1632812494755.jpg" alt="치약" />
                         <dl>
                             <dt>물사랑 상쾌한치약'</dt>
                             <!-- <dd>솔잎, 녹차 등 식물유래 성분으로 순하고 상쾌하게!</dd> -->
@@ -228,7 +228,7 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <a href="#" class="img_wrap">
-                                <img src="img/130502035_1_300.jpg" alt="동백꽃 수분쿠션"/>
+                                <img src="static/images/130502035_1_300.jpg" alt="동백꽃 수분쿠션"/>
                             </a>
                             <div class="txt_wrap">
                                 <span class="badge_best">인기</span>
@@ -239,7 +239,7 @@
                         </div>
                         <div class="swiper-slide">
                             <a href="#" class="img_wrap">
-                                <img src="img/130502035_1_300.jpg" alt="동백꽃 수분쿠션"/>
+                                <img src="static/images/130502035_1_300.jpg" alt="동백꽃 수분쿠션"/>
                             </a>
                             <div class="txt_wrap">
                                 <!-- <span class="badge_best">인기</span> -->
@@ -250,7 +250,7 @@
                         </div>
                         <div class="swiper-slide">
                             <a href="#" class="img_wrap">
-                                <img src="img/130502035_1_300.jpg" alt="동백꽃 수분쿠션"/>
+                                <img src="static/images/130502035_1_300.jpg" alt="동백꽃 수분쿠션"/>
                             </a>
                             <div class="txt_wrap">
                                 <!-- <span class="badge_best">인기</span> -->
@@ -280,7 +280,7 @@
             <ul>
                 <li>
                     <a href="#" class="img_wrap">
-                        <img src="img/051106023_1_300.png" alt="상추"/>
+                        <img src="static/images/051106023_1_300.png" alt="상추"/>
                     </a>
                     <div class="txt_wrap">
                         <span class="badge_best">인기</span>
@@ -290,18 +290,7 @@
                     </div>
                 <li>
                     <a href="#" class="img_wrap">
-                        <img src="img/051106023_1_300.png" alt="상추"/>
-                    </a>
-                    <div class="txt_wrap">
-                        <span class="badge_best">인기</span>
-                        <div class="pd_name"><a href="#">상추(150g)</a></div>
-                        <div class="pd_price"><a href="#">1,500원</a></div>
-                        <a href="#" class="add_cart"><span class="blind">장바구니 담기</span></a>
-                    </div>
-                </li>
-                <li>
-                    <a href="#" class="img_wrap">
-                        <img src="img/051106023_1_300.png" alt="상추"/>
+                        <img src="static/images/051106023_1_300.png" alt="상추"/>
                     </a>
                     <div class="txt_wrap">
                         <span class="badge_best">인기</span>
@@ -312,7 +301,18 @@
                 </li>
                 <li>
                     <a href="#" class="img_wrap">
-                        <img src="img/051106023_1_300.png" alt="상추"/>
+                        <img src="static/images/051106023_1_300.png" alt="상추"/>
+                    </a>
+                    <div class="txt_wrap">
+                        <span class="badge_best">인기</span>
+                        <div class="pd_name"><a href="#">상추(150g)</a></div>
+                        <div class="pd_price"><a href="#">1,500원</a></div>
+                        <a href="#" class="add_cart"><span class="blind">장바구니 담기</span></a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="img_wrap">
+                        <img src="static/images/051106023_1_300.png" alt="상추"/>
                     </a>
                     <div class="txt_wrap">
                         <span class="badge_best">인기</span>
