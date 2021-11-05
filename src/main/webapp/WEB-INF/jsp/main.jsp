@@ -212,7 +212,7 @@
     <section id="mainUser">
         <div class="user_wrap clear">
             <div class="user_title">
-                <h2 class="tit"><span>조합원</span>님을 위한<br/> <span class="fb">추천물품</span></h2>
+                <h2 class="tit"><span id="userId">조합원</span>님을 위한<br/> <span class="fb">추천물품</span></h2>
                 <p>햅쌀로 맛있는 솥밥</p>
                 <a href="#" class="more_view">더보기</a>
             </div>
@@ -321,7 +321,7 @@
     <section id="mainReview">
         <div class="review_wrap clear">
             <div class="review_tit">
-                <h2 class="tit">조합원의 생생한 <br/><span class="fb">이용후기</span></h2>
+                <h2 class="tit"><span id="userName">조합원</span>의 생생한 <br/><span class="fb">이용후기</span></h2>
                 <p>이웃 조합원은<br/> 어떤 물품을 구매했을까요?</p>
             </div><!--//review_tit-->
             <div class="review_txt">
@@ -350,39 +350,45 @@
     </section><!--//mainReview-->
     <section id="mainNotice" class="clear">
         <div class="notice">
-            <dl>
-                <dt>공지사항</dt>
-                <dd>
-                    <ul>
-                        <li>
-                            <a href="#">살림포인트 소멸 안내</a>
-                            <span>2021.11.01</span>
-                        </li>
-                        <li>
-                            <a href="#">살림포인트 소멸 안내</a>
-                            <span>2021.11.01</span>
-                        </li>
-                        <li>
-                            <a href="#">살림포인트 소멸 안내</a>
-                            <span>2021.11.01</span>
-                        </li>
-                    </ul>
-                </dd>
-            </dl>
+            <strong class="box_tit">공지사항</strong>
+            <ul>
+                <li>
+                    <a href="#">포인트 소멸 안내</a>
+                    <span>2021.11.01</span>
+                </li>
+                <li>
+                    <a href="#">포인트 소멸 안내</a>
+                    <span>2021.11.01</span>
+                </li>
+                <li>
+                    <a href="#">포인트 소멸 안내</a>
+                    <span>2021.11.01</span>
+                </li>
+            </ul>
         </div>
         <div class="counsel">
-            <p class="tit">조합원상담실</p>
+            <strong class="box_tit">고객센터</strong>
             <p class="phone">1666-0000</p>
-            <p class="email">abcd@abcd</p>
+            <p class="date"><span class="color_g">평일</span> 오전 9시  ~ 오후 6시</p>
+            <p class="holiday">주말 및 공휴일 휴무</p>
+            <p class="email"><span class="color_g">이메일</span> abcd@abcd</p>
         </div>
         <div class="qna">
-            <p class="tit">문의하기</p>
-            <a href="#">1:1문의하기</a>
+            <strong class="box_tit">문의하기</strong>
+            <a href="#" class="customer_qna">1:1문의하기</a>
         </div>
     </section><!--//mainHot-->
 </main>
 <footer>
-
+    <div class="info_box">
+        <p>상호명 : GYMTEM</p>
+        <p>대표자 : 홍길동</p>
+        <p>사업자등록번호 : 123-45-6789</p>
+        <p>통신판매업신고번호 : 2014 호</p>
+        <p>서울지점 : 서울시 강남구 봉은사로 154 3층</p>
+        <p><a href="mailto:abcdd@abcd">abcdd@abcd</a></p>
+        <p>이곳의 모든 저작권은 홍길동에게 있습니다.</p>
+    </div>
 </footer>
 </body>
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
@@ -417,7 +423,8 @@
             url:"/test.do",
             dataType:"json", //서버가 요청 URL을 통해서 응답하는 내용의 타입
             success : function(result){
-                console.log(result.list[0].member_id);
+                console.log(result.list);
+                $('#userName').text(result.list[4].member_name);
             },
             error : function(a, b, c) {
                 //통신 실패시 발생하는 함수(콜백)

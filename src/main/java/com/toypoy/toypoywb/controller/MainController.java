@@ -23,10 +23,6 @@ public class MainController {
     @Autowired
     MainService mainService;
 
-
-
-
-
     private static final Logger logger = LogManager.getLogger(MainController.class);
 
     @RequestMapping(value = "/main.do", method = RequestMethod.GET)
