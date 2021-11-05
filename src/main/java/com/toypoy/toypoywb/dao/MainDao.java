@@ -12,7 +12,6 @@ public class MainDao {
 
     private final SqlSession sqlSession;
 
-
     public String selectTest(){
         return sqlSession.selectOne("selectTest");
     }
@@ -20,6 +19,7 @@ public class MainDao {
     public List<HashMap<String,Object>> selectList(){
         return sqlSession.selectList("selectList");
     }
+
 
 
 }
