@@ -380,15 +380,25 @@
     </section><!--//mainHot-->
 </main>
 <footer>
-    <div class="info_box">
-        <p>상호명 : GYMTEM</p>
-        <p>대표자 : 홍길동</p>
-        <p>사업자등록번호 : 123-45-6789</p>
-        <p>통신판매업신고번호 : 2014 호</p>
-        <p>서울지점 : 서울시 강남구 봉은사로 154 3층</p>
-        <p><a href="mailto:abcdd@abcd">abcdd@abcd</a></p>
-        <p>이곳의 모든 저작권은 홍길동에게 있습니다.</p>
-    </div>
+    <div class="footer_wrap">
+        <div class="info_list">
+            <ul clas="clear">
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">홈페이지소개</a></li>
+                <li><a href="#">앱다운로드</a></li>
+            </ul>
+        </div>
+        <div class="info_box">
+            <p>상호명 : <span class="fb">GYMTEM</span></p>
+            <p>대표자 : <span class="fb">홍길동</span></p>
+            <p>사업자등록번호 : <span class="fb">123-45-6789</span></p>
+            <p>통신판매업신고번호 : 2014 호</p>
+            <p>서울지점 : 서울시 강남구 봉은사로 154 3층</p>
+            <p><a href="mailto:abcdd@abcd">abcdd@abcd</a></p>
+            <p>이곳의 모든 저작권은 홍길동에게 있습니다.</p>
+        </div>
+    </div><!-- //footer_wrap -->
 </footer>
 </body>
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
