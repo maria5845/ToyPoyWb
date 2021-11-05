@@ -4,6 +4,9 @@ import com.toypoy.toypoywb.dao.MainDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
+import java.util.List;
+
 @Service
 public class MainService {
 
@@ -15,6 +18,8 @@ public class MainService {
         return timeString;
     };
 
-
+    public List<HashMap<String, Object>> selectLsit(){
+        return dao.selectList();
+    }
 
 }

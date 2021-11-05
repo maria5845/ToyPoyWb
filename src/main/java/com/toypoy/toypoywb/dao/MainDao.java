@@ -3,6 +3,9 @@ import lombok.RequiredArgsConstructor;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
+import java.util.HashMap;
+import java.util.List;
+
 @RequiredArgsConstructor
 @Repository
 public class MainDao {
@@ -14,9 +17,9 @@ public class MainDao {
         return sqlSession.selectOne("selectTest");
     }
 
-
-
-
+    public List<HashMap<String,Object>> selectList(){
+        return sqlSession.selectList("selectList");
+    }
 
 
 }

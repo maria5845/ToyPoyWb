@@ -386,7 +386,7 @@
 </footer>
 </body>
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-<script src="static/common/jquery-3.6.1.min.js"></script>
+<script src="static/common/jquery-3.6.0.min.js"></script>
 <script>
     var swiper01 = new Swiper("#mainSlide .mySwiper", {
         pagination: {
@@ -410,18 +410,23 @@
             prevEl: ".swiper-button-prev",
         },
     });
+
     $('#test').on('click',function (){
         $.ajax({
             type: "GET", //요청 메소드 방식
-            url:"/AjaxTest/ex01.do",
-            dataType:"text", //서버가 요청 URL을 통해서 응답하는 내용의 타입
+            url:"/test.do",
+            dataType:"json", //서버가 요청 URL을 통해서 응답하는 내용의 타입
             success : function(result){
-                console.log(result);
+                console.log(result.list[0].member_id);
             },
-            error : function(a, b, c){
+            error : function(a, b, c) {
                 //통신 실패시 발생하는 함수(콜백)
-                alert(a + b + c);
+
             }
-    })
+
+        });
+    });
+
 </script>
+
 </html>
