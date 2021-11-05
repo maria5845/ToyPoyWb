@@ -462,8 +462,20 @@
         });
     });
 
-    $('.total_menu_tit').mouseover(function(){
-        $('.total_menu').show();
+    $('.total_menu_tit').hover(function(){
+        $(this).css({'backgroundColor':'#000','color':'#fff'});
+        $('.gnb_con span').css('background','#fff');
+    },function(){
+        $(this).css({'backgroundColor':'#fff','color':'#000'});
+        $('.gnb_con span').css('background','#000');
+    });
+
+    $('.total_menu_tit, .total_menu').mouseover(function(){
+        $('.total_menu').stop().slideDown();
+    });
+
+    $('.total_menu_tit, .total_menu').mouseout(function(){
+        $('.total_menu').stop().slideUp();
     });
 
 </script>
