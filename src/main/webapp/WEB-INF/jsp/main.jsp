@@ -371,7 +371,7 @@
             <p class="phone">1666-0000</p>
             <p class="date"><span class="color_g">평일</span> 오전 9시  ~ 오후 6시</p>
             <p class="holiday">주말 및 공휴일 휴무</p>
-            <p class="email"><span class="color_g">이메일</span> abcd@abcd</p>
+            <p class="email"><span class="color_g">이메일</span>abcd@abcd</p>
         </div>
         <div class="qna">
             <strong class="box_tit">문의하기</strong>

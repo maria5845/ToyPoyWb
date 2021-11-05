@@ -161,16 +161,18 @@ nav .gnb li {float: left; font-size: 20px; padding: 0 20px;}
 /* mainNotice */
 #mainNotice {width: 1200px; height: 384px; margin: 0 auto; box-sizing: border-box;}
 #mainNotice > div {position:relative; float: left; width: 400px; height: 100%; padding: 85px 26px 130px 40px; box-sizing: border-box; line-height: 30px;}
-#mainNotice > div::after {content: ''; position:absolute; top:50%; right:0; display: block; width: 1px; height: 240px; background: var(--gray); transform: translateY(-50%);}
+#mainNotice > div::after {content: ''; position:absolute; top:50%; right:0; display: block; width: 2px; height: 240px; background: var(--yellow); transform: translateY(-50%);}
+#mainNotice > div:last-child::after {content: none;}
 #mainNotice .box_tit {position:relative; font-weight: 600; font-size: 20px;}
 /* #mainNotice .box_tit::after {content: ''; position:absolute; display: block; top: 34px; width: 100px; height: 2px; background: var(--yellow); } */
 #mainNotice .notice ul {margin-top: 10px;}
 #mainNotice .notice ul li span {float:right; font-size: 12px; color: var(--gray);}
 #mainNotice .counsel .phone {margin:20px 0 10px; font-size: 32px; font-weight: 700; color: var(--gray);}
-#mainNotice .qna .customer_qna {display:block; width: 240px; height: 60px; margin: 40px auto 0; font-size: 20px; border: 2px solid var(--gray); line-height: 60px; text-align: center;}
+#mainNotice .qna .customer_qna {display:block; width: 240px; height: 60px; margin: 40px auto 0; font-size: 20px; border: 2px solid var(--gray); background: var(--lyellow); line-height: 60px; text-align: center;}
 
 /* footer */
-footer {width: 100%; height: 80px; background: var(--gray);}
+footer {width: 100%; height: 60px;  border-top: 1px solid gray; padding: 30px 0 60px;}
 footer .info_box {width: 1200px; margin: 0 auto;}
-footer .info_box p {position: relative; float: left; margin-left: 7px; padding-left: 8px;}
-#footer .info_box p:nth-child(1), #footer .info_box p:nth-child(4), #footer .info_box p:nth-child(5), #footer .info_box p:last-of-type {clear: both; margin-left: 0; padding-left: 0;}
+footer .info_box p {position: relative; float: left; margin-left: 7px; padding-left: 8px; color: var(--gray); font-size: 13px;}
+footer .info_box p:nth-child(1), footer .info_box p:nth-child(4), footer .info_box p:nth-child(5), footer .info_box p:last-of-type {clear: both; margin-left: 0; padding-left: 0;}
+footer .info_box p:nth-child(1)::after, footer .info_box p:nth-child(2)::after {content: ''; position: absolute; display: block; top: 8px; right: -6px; width: 1px; height: 10px; background: var(--gray);}
