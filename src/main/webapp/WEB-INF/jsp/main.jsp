@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="static/css/default.css">
     <link rel="stylesheet" href="static/css/main.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-    <title>GYMTEM</title>
+    <title>메인 | GYMTEM</title>
 </head>
 <body>
 <header class="clear">
@@ -31,13 +31,31 @@
 </header>
 <nav>
     <ul class="gnb clear">
-        <li><a href="#">전체물품</a></li>
-        <li><a href="#">핫딜</a></li>
+        <li class="total_menu_tit">
+            <div class="gnb_con">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <a href="#">전체물품</a>
+            <ul class="total_menu">
+                <li><a href="#"><span class="fb">헬스용품</span></a></li>
+                <li><a href="#"><span class="fb">기구</span></a></li>
+                <li><a href="#"><span class="fb">보충제</span></a></li>
+                <li><a href="#"><span class="fb">단백질 식품</span></a></li>
+                <li><a href="#"><span class="fb">홈트레이닝</span></a></li>
+                <li><a href="#"><span class="fb">다이어트 제품</span></a></li>
+                <li><a href="#"><span class="fb">스포츠웨어</span></a></li>
+                <li><a href="#"><span class="fb">건강식품</span></a></li>
+            </ul>
+        </li>
+        <li><a href="#">최저가</a></li>
         <li><a href="#">추천</a></li>
         <li><a href="#">새물품</a></li>
         <li><a href="#">이벤트</a></li>
         <li><a href="#">식단플랜</a></li>
         <li><a href="#">근처 헬스장</a></li>
+        <li class="time_sale fb"><a href="#">TIME SALE</a></li>
     </ul>
 </nav>
 <main>
@@ -64,7 +82,7 @@
                     <span class="badge_best">인기</span>
                     <div class="pd_name"><a href="#">상추(150g)</a></div>
                     <div class="pd_price"><a href="#">1,500원</a></div>
-                    <a href="#" class="add_cart"><span class="blind">장바구니 담기</span></a>
+                    <a href="#" class="add_cart xi-calculator"><span class="blind">장바구니 담기</span></a>
                 </div>
             </li>
             <li>
@@ -262,11 +280,11 @@
         <h2 class="tit">지금 가장 많이 이용하는 <span class="fb">인기물품</span></h2>
         <div class="hot_tab">
             <ul class="clear">
-                <li class="active"><a href="#"><span>카테고리1</span></a></li>
-                <li><a href="#"><span>카테고리2</span></a></li>
-                <li><a href="#"><span>카테고리3</span></a></li>
-                <li><a href="#"><span>카테고리4</span></a></li>
-                <li><a href="#"><span>카테고리5</span></a></li>
+                <li class="active"><a href="#"><span>헬스용품</span></a></li>
+                <li><a href="#"><span>헬스기구</span></a></li>
+                <li><a href="#"><span>다이어트 제품</span></a></li>
+                <li><a href="#"><span>보충제</span></a></li>
+                <li><a href="#"><span>건강식품</span></a></li>
             </ul>
         </div>
         <div class="hot_pd">
@@ -442,6 +460,10 @@
             }
 
         });
+    });
+
+    $('.total_menu_tit').mouseover(function(){
+        $('.total_menu').show();
     });
 
 </script>

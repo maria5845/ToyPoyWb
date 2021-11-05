@@ -27,7 +27,7 @@ img {width: 100%;}
 h2.tit {font-size: 30px; line-height: 40px;}
 .pd_name { font-size: 16px; padding: 16px 0 30px;}
 .pd_price { font-size: 22px; font-weight: 600;}
-.add_cart {position:absolute; display:block; width: 30px; height: 30px; bottom:0; right:10px; background: url(../images/btnCart.png);}
+.add_cart {position:absolute; display:block; width: 30px; height: 30px; bottom:0; right:10px; background: url(../images/main/btnCart.png);}
 a.more_view {display:block; width: 114px; height: 34px; line-height: 34px; text-align: center; border: 1px solid #939597; background: #fff; color: #939597;}
 
 /* header */
