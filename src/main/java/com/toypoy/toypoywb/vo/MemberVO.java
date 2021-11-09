@@ -44,7 +44,6 @@ public class MemberVO {
         this.MEMBER_AD2 = memberVO.getMEMBER_AD2();
     }
 
-
     @Override
     public String toString() {
         return "MemberVO{" +

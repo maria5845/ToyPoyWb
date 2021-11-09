@@ -8,9 +8,4 @@
         FROM dual
     </select>
 
-    <select id="selectList" resultType="map">
-        select member_id, member_pw,member_name,member_email,member_phone From toy_member;
-    </select>
-
-
 </mapper>

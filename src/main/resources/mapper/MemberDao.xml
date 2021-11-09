@@ -4,7 +4,7 @@
 <mapper namespace="com.toypoy.toypoywb.dao.MemberDao">
 
     <select id="getUserInfoCount" parameterType="java.util.HashMap" resultType="int">
-      SELECT count(*) FROM
+
     </select>
 
 
