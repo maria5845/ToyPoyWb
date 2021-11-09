@@ -1,6 +1,5 @@
 package com.toypoy.toypoywb.controller;
 
-
 import com.toypoy.toypoywb.service.MainService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -26,14 +25,8 @@ public class MainController {
         return "main";
     }
 
-    @RequestMapping(value="test.do",method = RequestMethod.GET)
-    public @ResponseBody String getTestList(Model model) throws  Exception{
-        JSONObject json = new JSONObject();
-        try {
-            json.put("list",mainService.selectLsit());
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        return json.toString();
-    }
+
+
+
+
 }
