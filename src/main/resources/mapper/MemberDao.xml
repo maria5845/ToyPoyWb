@@ -155,7 +155,7 @@
 
     <select id="getAuthMemberId" parameterType="java.util.HashMap" resultType="String">
         SELECT
-        Member_authid
+            Member_authid
         FROM GT_Member
         WHERE 1=1
         AND Member_id = #{Member_id}

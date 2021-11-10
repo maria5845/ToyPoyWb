@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd">
+
+<mapper namespace="com.toypoy.toypoywb.dao.GiftItemsDao">
+    <!--
+    <select id="getArtistCount" parameterType="java.util.HashMap" resultType="int">
+        /** ArtistMapper.getArtistCount **/
+        SELECT COUNT(*) FROM artist_info t1
+        LEFT JOIN category_info t2 ON t1.cate_id = t2.cate_id
+        <if test="exhibit_id != null and exhibit_id != ''">
+            INNER JOIN exhibit_lnk t3 ON t1.artist_id  = t3.section_id
+        </if>
+        WHERE 1=1
+        <if test='is_star != null and is_star == "Y"'>AND is_star = 'Y'</if>
+        <if test='is_hidden != null and is_hidden == "Y"'>AND is_hidden = 'Y'</if>
+        <if test='is_under != null and is_under == "Y"'>AND is_under = 'Y'</if>
+        <if test="cate_name != null and cate_name != ''">AND cate_name = #{cate_name}</if>
+        <if test='exhibit_id != null and exhibit_id != ""'>AND exhibit_id = #{exhibit_id}</if>
+        <if test="searchValue != null or searchValue != null">
+            AND (
+            title LIKE CONCAT('%', IFNULL(#{searchValue}, ''),'%')
+            OR artist_kname LIKE CONCAT('%', IFNULL(#{searchValue}, ''),'%')
+            OR artist_ename LIKE CONCAT('%', IFNULL(#{searchValue}, ''),'%')
+            OR search_word LIKE CONCAT('%', IFNULL(#{searchValue}, ''), '%')
+            )
+        </if>
+        <if test="searchMobile != null and searchMobile != ''">
+            AND (
+            title LIKE CONCAT('%', IFNULL(#{searchMobile}, ''),'%')
+            OR artist_kname LIKE CONCAT('%', IFNULL(#{searchMobile}, ''),'%')
+            OR artist_ename LIKE CONCAT('%', IFNULL(#{searchMobile}, ''),'%')
+            OR search_word LIKE CONCAT('%', IFNULL(#{searchMobile}, ''), '%')
+            )
+        </if>
+    </select>
+
+    <select id="getArtistList" parameterType="java.util.HashMap" resultMap="artistMap">
+        /** ArtistMapper.getArtistList **/
+        SELECT
+        T1.artist_id
+        , T1.cate_id
+        , (SELECT cate_name FROM category_info WHERE cate_id = T1.cate_id) AS cate_name
+        , T1.artist_kname
+        , T1.artist_ename
+        , T1.title
+        , T1.summary
+        , T1.detail
+        , (CASE WHEN T1.disp_yn = 'Y' THEN '진열'
+        WHEN T1.disp_yn = 'N' THEN '미진열'
+        END) AS disp_yn
+        , T1.video_url
+        , SUBSTRING_INDEX(T1.video_url, '/', -1) AS vimeo_id
+        , LEFT(T1.reg_date, 10) AS reg_date
+        , LEFT(T1.mod_date, 10) AS mod_date
+        , T1.is_star
+        , T1.is_hidden
+        , T1.is_under
+        , T2.org_file_name AS thumbnail_file
+        , T2.file_name AS thumbnail_file_name
+        , T2.file_type AS thumbnail_file_type
+        , T3.org_file_name AS top_file
+        , T3.file_name AS top_file_name
+        , T3.file_type AS top_file_type
+        , T2.file_path AS thumbnail_file_path
+        , T3.file_path AS top_file_path
+        <if test="user_info_id != null and user_info_id != ''">
+            , T4.type AS type
+        </if>
+        , (SELECT GROUP_CONCAT(video_url) FROM hotclip_info WHERE section_id = T1.artist_id AND use_type = '1') AS hotclip_url
+        FROM artist_info T1
+        LEFT JOIN artist_file   T2 ON T1.artist_id = T2.artist_id  AND T2.use_type = '1'
+        LEFT JOIN artist_file   T3 ON T1.artist_id = T3.artist_id  AND T3.use_type = '2'
+        <if test="user_info_id != null and user_info_id != ''">
+            LEFT JOIN user_favorite T4 ON T1.artist_id = T4.content_id AND T4.type = 'artist' AND T4.user_info_id = #{user_info_id}
+        </if>
+        <if test="exhibit_id != null and exhibit_id != ''">
+            INNER JOIN exhibit_lnk T8 ON T1.artist_id  = T8.section_id
+        </if>
+        WHERE 1=1
+        <if test="cate_id != null and cate_id != ''">AND T1.cate_id = #{cate_id} OR T1.cate_id IN (SELECT cate_id FROM category_info WHERE parent_id = #{cate_id})</if>
+        <if test='is_star != null and is_star == "Y"'>AND T1.is_star = 'Y'</if>
+        <if test='is_hidden != null and is_hidden == "Y"'>AND T1.is_hidden = 'Y'</if>
+        <if test='is_under != null and is_under == "Y"'>AND T1.is_under = 'Y'</if>
+        <if test='exhibit_id != null and exhibit_id != ""'>AND exhibit_id = #{exhibit_id}</if>
+        <if test="searchValue != null or searchValue != null">
+            AND (
+            T1.title LIKE CONCAT('%', IFNULL(#{searchValue}, ''),'%')
+            OR T1.artist_kname LIKE CONCAT('%', IFNULL(#{searchValue}, ''),'%')
+            OR T1.artist_ename LIKE CONCAT('%', IFNULL(#{searchValue}, ''),'%')
+            OR T1.search_word LIKE CONCAT('%', IFNULL(#{searchValue}, ''), '%')
+            )
+        </if>
+        <if test="searchMobile != null and searchMobile != ''">
+            AND (
+            T1.title LIKE CONCAT('%', IFNULL(#{searchMobile}, ''),'%')
+            OR T1.artist_kname LIKE CONCAT('%', IFNULL(#{searchMobile}, ''),'%')
+            OR T1.artist_ename LIKE CONCAT('%', IFNULL(#{searchMobile}, ''),'%')
+            OR T1.search_word LIKE CONCAT('%', IFNULL(#{searchMobile}, ''), '%')
+
+            )
+        </if>
+        <if test="cate_name != null and cate_name != ''">HAVING cate_name = #{cate_name}</if>
+        <if test="sort != null and sort != ''">ORDER BY ${sort} ${order}</if>
+        <if test="limitSize != null">
+            LIMIT #{limitSize}, #{pageSize}
+        </if>
+    </select>
+    -->
+</mapper>

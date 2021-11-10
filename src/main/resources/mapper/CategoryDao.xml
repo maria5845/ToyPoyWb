@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd">
+
+<mapper namespace="com.toypoy.toypoywb.dao.CategoryDao">
+    <select id="getCategoryCount" parameterType="java.util.HashMap" resultType="int">
+        SELECT count(*) FROM category_info
+    </select>
+
+    <select id="getCategoryList" parameterType="java.util.HashMap" resultType="java.util.LinkedHashMap">
+        SELECT
+        cate_id
+        , parent_id
+        , cate_name
+        , reg_id
+        , LEFT(reg_date, 19) AS reg_date
+        FROM category_info
+        WHERE 1=1
+    </select>
+
+    <select id="getCategory" parameterType="java.util.HashMap" resultType="java.util.HashMap">
+        SELECT
+        cate_id
+        ,parent_id
+        ,cate_name
+        ,reg_id
+        ,reg_date
+        ,mod_id
+        ,mod_date
+        FROM category_info
+        WHERE cate_id = #{cate_id}
+    </select>
+
+    <insert id="insertCategory" parameterType="java.util.HashMap" >
+        INSERT INTO category_info (parent_id, cate_name, reg_id, reg_date)
+        VALUES(#{parent_id}, #{cate_name}, #{reg_id}, NOW())
+    </insert>
+
+
+    <delete id ="deleteCategory" parameterType="java.util.HashMap">
+        DELETE FROM category_info
+        WHERE cate_id=#{cate_id}
+    </delete>
+
+    <update id="updateCategory" parameterType="java.util.HashMap">
+        UPDATE category_info
+        SET cate_name = #{cate_name},
+        mod_id = #{mod_id},
+        mod_date = now()
+        WHERE cate_id = #{cate_id}
+    </update>
+
+    <select id="getCategoryInfoCount" parameterType="java.util.HashMap" resultType="int">
+        SELECT
+        COUNT(*)
+        FROM category_info t1
+        RIGHT JOIN category_info t2 ON t1.cate_id = t2.parent_id;
+    </select>
+
+
+    <select id="getCategoryInfoList" parameterType="java.util.HashMap" resultType="java.util.LinkedHashMap">
+        SELECT
+        @rownum := @rownum+1 AS NO
+        , t3.cate_id
+        , t3.parent_id
+        , t3.parent_name
+        , t3.cate_name
+        , t3.reg_id
+        , t3.reg_date
+        FROM (
+        SELECT
+        t2.cate_id AS cate_id
+        ,t2.parent_id AS parent_id
+        ,IFNULL(t1.cate_name, '전체')  AS parent_name
+        ,t2.cate_name AS cate_name
+        ,t2.reg_id AS reg_id
+        ,LEFT(t2.reg_date, 19) AS reg_date
+        FROM category_info t1
+        RIGHT JOIN category_info t2 ON t1.cate_id = t2.parent_id
+        ) t3
+        , (SELECT @rownum := 0) R
+        WHERE 1=1
+        <if test="cate_id != null and cate_id !='' and cate_id !=0 ">AND cate_id = #{cate_id} OR cate_id IN (SELECT cate_id FROM category_info WHERE parent_id = #{cate_id})</if>
+    </select>
+
+
+    <select id ="getCategoryNameList" parameterType="java.util.HashMap" resultType="java.util.LinkedHashMap">
+        SELECT
+        cate_id
+        ,cate_name
+        FROM category_info
+        WHERE parent_id= 0
+        AND cate_id <![CDATA[<>]]> 0
+    </select>
+
+</mapper>

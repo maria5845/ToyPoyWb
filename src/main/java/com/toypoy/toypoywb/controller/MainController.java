@@ -23,6 +23,7 @@ public class MainController {
     public String Main(Model model) {
         model.addAttribute("time", mainService.timeToString());
         return "main";
+
     }
 
 

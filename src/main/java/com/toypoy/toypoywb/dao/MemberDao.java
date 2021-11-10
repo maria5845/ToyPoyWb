@@ -10,7 +10,6 @@ import java.util.List;
 @Repository
 public interface MemberDao {
 
-
     public int getMemberCount(HashMap<String,Object> param);
 
     public HashMap<String,Object> getMember(int Member_seq);
@@ -29,7 +28,14 @@ public interface MemberDao {
 
     public void insertMember(HashMap<String,Object> param);
 
-    
+    public void updateMember(HashMap<String,Object> param);
+
+    public void deleteMember(HashMap<String,Object> param);
+
+    public HashMap<Integer,Object> getMemberSeq(HashMap<String, Object> param);
+
+    public void updateMemberPw(HashMap<String,Object> param);
+
 
 
 

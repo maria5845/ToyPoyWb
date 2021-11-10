@@ -5,9 +5,7 @@ import org.springframework.stereotype.Repository;
 
 @Mapper
 @Repository
-public interface MainDao {
-
-     public String selectTest();
+public interface GiftItemsDao {
 
 
 }
