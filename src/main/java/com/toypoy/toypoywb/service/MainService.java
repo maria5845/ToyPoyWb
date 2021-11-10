@@ -18,8 +18,6 @@ public class MainService {
         return timeString;
     };
 
-    public List<HashMap<String, Object>> selectLsit(){
-        return dao.selectList();
-    }
+
 
 }

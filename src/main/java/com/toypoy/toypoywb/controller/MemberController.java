@@ -15,19 +15,7 @@ public class MemberController {
     @Autowired
     MainService mainService;
 
-    @RequestMapping(value="test.do",method = RequestMethod.GET)
-    public @ResponseBody
-    String getTestList(Model model) throws  Exception{
-        JSONObject json = new JSONObject();
 
-        try {
-            json.put("list",mainService.selectLsit());
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-
-        return json.toString();
-    }
 
 
 

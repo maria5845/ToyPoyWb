@@ -15,7 +15,7 @@ public class ConnectionTest {
     private SqlSessionFactory sqlSessionFactory;
 
     @Autowired
-    private MainDao dao;
+    MainDao dao;
 
     @Test
     public void connectionTest(){
@@ -28,6 +28,6 @@ public class ConnectionTest {
 
     @Test
     public void mapper_test(){
-         System.out.println("@@@@@@@@@@@"+dao.selectTest());
+        System.out.println("@@@@@@@@@@@@@" + dao.selectTest());
     }
 }

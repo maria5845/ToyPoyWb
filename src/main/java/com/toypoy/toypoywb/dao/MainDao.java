@@ -1,25 +1,12 @@
 package com.toypoy.toypoywb.dao;
-import lombok.RequiredArgsConstructor;
-import org.apache.ibatis.session.SqlSession;
+
+import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
-import java.util.HashMap;
-import java.util.List;
-
-@RequiredArgsConstructor
+@Mapper
 @Repository
-public class MainDao {
+public interface MainDao {
 
-    private final SqlSession sqlSession;
-
-    public String selectTest(){
-        return sqlSession.selectOne("selectTest");
-    }
-
-    public List<HashMap<String,Object>> selectList(){
-        return sqlSession.selectList("selectList");
-    }
-
-
+     public String selectTest();
 
 }

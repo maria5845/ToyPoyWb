@@ -3,10 +3,431 @@
 
 <mapper namespace="com.toypoy.toypoywb.dao.MemberDao">
 
-    <select id="getUserInfoCount" parameterType="java.util.HashMap" resultType="int">
-
+    <select id="getMemberCount" parameterType="java.util.HashMap" resultType="int">
+        SELECT COUNT(*) FROM GT_MEMBER
     </select>
 
+    <select id="getMember" parameterType="java.util.HashMap" resultType="int">
+        SELECT
+         t1.Member_seq
+        ,t1.Member_id
+        ,t1.Member_pw
+        ,t1.Member_pw2
+        ,t1.Member_name
+        ,t1.Member_email
+        ,t1.Member_phone
+        ,t1.Member_addrno
+        ,t1.Member_addr1
+        ,t1.Member_addr2
+        ,left(reg_date,19) as reg_date
+        ,t1.Member_social_type
+        FROM GT_Member t1
+        WHERE Member_seq = #{Member_seq}
+    </select>
+
+
+    <select id="getSocialMember" parameterType="java.util.HashMap" resultType="java.util.HashMap">
+        SELECT
+        t1.Member_seq
+        ,t1.Member_id
+        ,t1.Member_pw
+        ,t1.Member_pw2
+        ,t1.Member_name
+        ,t1.Member_email
+        ,t1.Member_phone
+        ,t1.Member_addrno
+        ,t1.Member_addr1
+        ,t1.Member_addr2
+        FROM GT_Member t1
+        WHERE Member_social_id=#{Member_social_id}
+        AND	Member_social_type=#{Member_social_type}
+    </select>
+
+    <select id="getMemberById" parameterType="java.util.HashMap" resultType="java.util.HashMap">
+        SELECT
+        t1.Member_seq
+        ,t1.Member_id
+        ,t1.Member_pw
+        ,t1.Member_pw2
+        ,t1.Member_name
+        ,t1.Member_email
+        ,t1.Member_phone
+        ,t1.Member_addrno
+        ,t1.Member_addr1
+        ,t1.Member_addr2
+        ,left(reg_date,19) as reg_date
+        ,t1.Member_social_id
+        ,t1.Member_social_type
+        FROM GT_Member t1
+        WHERE 1=1
+        <if test="Member_id != null and Member_id != ''">
+            AND Member_id=#{Member_id}
+        </if>
+        <if test="Member_social_id != null and Member_social_id != ''">
+            AND Member_social_id=#{Member_social_id}
+        </if>
+        <if test="Member_social_type != null and Member_social_type != ''">
+            AND Member_social_type=#{Member_social_type}
+        </if>
+    </select>
+
+
+    <select id="getMemberList" parameterType="java.util.HashMap" resultType="java.util.LinkedHashMap">
+        SELECT
+        t1.Member_seq
+        ,t1.Member_id
+        ,t1.Member_pw
+        ,t1.Member_pw2
+        ,t1.Member_name
+        ,t1.Member_email
+        ,t1.Member_phone
+        ,t1.Member_addrno
+        ,t1.Member_addr1
+        ,t1.Member_addr2
+        ,left(reg_date,19) as reg_date
+        FROM GT_Member t1
+        WHERE 1=1
+        <if test="searchValue != null and searchValue != ''">
+            AND (
+            Member_name LIKE CONCAT('%', IFNULL(#{searchValue}, ''),'%')
+            OR Member_id LIKE CONCAT('%', IFNULL(#{searchValue}, ''),'%')
+            OR Member_email LIKE CONCAT('%', IFNULL(#{searchValue}, ''),'%')
+            OR Member_phone LIKE CONCAT('%', IFNULL(#{searchValue}, ''),'%')
+            )
+        </if>
+    </select>
+
+    <insert id="insertMember" parameterType="java.util.HashMap">
+        INSERT INTO GT_Member(
+        Member_id,
+        Member_pw,
+        Member_pw2,
+        Member_name,
+        Member_email,
+        Member_phone,
+        Member_addrno,
+        Member_addr1,
+        Member_addr2,
+        reg_date
+        <if test="Member_social_id != null and Member_social_id != ''">
+            ,Member_social_id
+            ,Member_social_type
+        </if>
+        )
+        VALUES(
+        #{Member_id},
+        #{Member_pw},
+        #{Member_pw2},
+        #{Member_name},
+        #{Member_email},
+        #{Member_phone},
+        #{Member_addrno},
+        #{Member_addr1},
+        #{Member_addr2},
+        SYSDATE()
+        <if test="Member_social_id != null and Member_social_id != ''">
+            ,#{Member_social_id},
+            ,#{Member_social_type}
+        </if>
+        )
+    </insert>
+
+    <update id="updateMember" parameterType="java.util.HashMap">
+        UPDATE GT_Member
+        <set>
+            Member_id = #{Member_id},
+            <if test="Member_pw != ''">Member_pw = #{Member_pw}, </if>
+            Member_name = #{Member_name},
+            Member_email = #{Member_email},
+            Member_phone = #{Member_phone},
+            Member_addrno = #{Member_addrno},
+            Member_addr1 = #{Member_addr1},
+            Member_addr2 = #{Member_addr2}
+        </set>
+        WHERE Member_seq = #{Member_seq}
+    </update>
+
+    <delete id="deleteMember" parameterType="java.util.HashMap">
+        DELETE FROM GT_Member
+        WHERE Member_seq = #{Member_seq}
+    </delete>
+
+
+    <select id="getAuthMemberId" parameterType="java.util.HashMap" resultType="String">
+        SELECT
+        Member_authid
+        FROM GT_Member
+        WHERE 1=1
+        AND Member_id = #{Member_id}
+        AND Member_name = #{Member_name}
+        AND Member_email = #{Member_email}
+    </select>
+
+    <select id="getMemberIdByEmail" parameterType="java.util.HashMap"  resultType="java.util.HashMap">
+        SELECT
+        Member_id
+        ,DATE_FORMAT(reg_date, '%Y.%m.%d') as reg_date
+        FROM GT_Member
+        WHERE 1=1
+        AND Member_name = #{Member_name}
+        AND Member_email = #{Member_email}
+    </select>
+
+    <select id="getMemberPasswdByAuthId"  parameterType="java.util.HashMap" resultType="String">
+        SELECT
+            Member_pw
+        FROM GT_Member
+        WHERE 1=1
+        AND Member_authid =#{Member_authid};
+    </select>
+
+    <select id="getMemberSeq" parameterType="java.util.HashMap" resultType="java.util.HashMap">
+        SELECT
+         Member_seq
+        FROM GT_Member
+        WHERE 1=1
+        <if test="Member_id != null and Member_id != ''">
+            AND Member_id = #{Member_id}
+        </if>
+        <if test="Member_name != null and Member_name != ''">
+            AND Member_name = #{Member_name}
+        </if>
+        <if test="Member_email != null and Member_email != ''">
+            AND Member_email = #{Member_email}
+        </if>
+    </select>
+
+    <update id="updateMemberPw" parameterType="java.util.HashMap">
+        UPDATE GT_Member
+        SET Member_pw = #{Member_pw}
+        WHERE 1=1
+        <if test="Member_id != null and Member_id != ''">
+            AND Member_id = #{Member_id}
+        </if>
+        <if test="Member_name != null and Member_name != ''">
+            AND Member_name = #{Member_name}
+        </if>
+        <if test="Member_email != null and Member_email != ''">
+            AND Member_email = #{Member_email}
+        </if>
+    </update>
+
+
+    <!--
+    <select id="getFavoriteCount" parameterType="hashmap" resultType="int">
+        SELECT COUNT(*) FROM user_favorite
+        WHERE user_info_id = #{user_info_id} AND type = #{type}
+    </select>
+
+
+    <select id="getFavoriteArtistList" parameterType="hashmap" resultType="hashmap">
+        SELECT
+        t2.artist_id
+        , t2.artist_kname
+        , t2.artist_ename
+        , (SELECT cate_name FROM category_info WHERE cate_id = t2.cate_id) AS cate_name
+        , t3.file_name AS thumbnail_file_name
+        , t3.file_type AS thumbnail_file_type
+        FROM user_favorite t1
+        LEFT JOIN artist_info t2 ON t1.content_id = t2.artist_id
+        LEFT JOIN artist_file t3 ON t2.artist_id = t3.artist_id AND t3.use_type='1'
+        WHERE t1.user_info_id = #{user_info_id}
+        AND t1.type = 'artist'
+        ORDER BY t1.reg_date DESC
+        <if test="limitSize != null"> LIMIT ${limitSize}, ${pageSize} </if>
+    </select>
+
+    <select id="getFavoriteBrandList" parameterType="hashmap" resultType="hashmap">
+        SELECT
+        t2.brand_id
+        , t2.brand_name
+        , t4.artist_kname
+        , (SELECT cate_name FROM category_info WHERE cate_id = t2.cate_id) AS cate_name
+        , t3.file_name AS thumbnail_file_name
+        , t3.file_type AS thumbnail_file_type
+        FROM user_favorite t1
+        LEFT JOIN brand_info t2 ON t1.content_id = t2.brand_id
+        LEFT JOIN brand_file t3 ON t2.brand_id = t3.brand_id AND t3.use_type='1'
+        LEFT JOIN artist_info t4 ON t2.artist_id = t4.artist_id
+        WHERE t1.user_info_id = #{user_info_id}
+        AND t1.type = 'brand'
+        ORDER BY t1.reg_date DESC
+        <if test="limitSize != null"> LIMIT ${limitSize}, ${pageSize} </if>
+    </select>
+
+    <insert id="insertFavoriteContent" parameterType="java.util.HashMap">
+        INSERT INTO user_favorite(
+        user_info_id,
+        content_id,
+        type,
+        reg_date
+        )
+        VALUES(
+        #{user_info_id},
+        #{content_id},
+        #{type},
+        NOW()
+        )
+    </insert>
+
+    <delete id="deleteFavoriteContent" parameterType="java.util.HashMap">
+        DELETE FROM user_favorite
+        WHERE user_info_id = #{user_info_id}
+        AND	  content_id   = #{content_id}
+        AND   type 		   = #{type}
+    </delete>
+
+
+    <select id="getHandyonCurrentPrice" parameterType="hashmap" resultType="int">
+        SELECT
+        IFNULL(SUM(price), 0) AS current_price
+        FROM user_funding
+        WHERE handyon_id = #{handyon_id}
+        AND status = 'success'
+    </select>
+
+    <select id="getHandyonPersonnelCount" parameterType="hashmap" resultType="int">
+        SELECT
+        COUNT(DISTINCT user_info_id) AS current_personnel
+        FROM user_funding
+        WHERE handyon_id = #{handyon_id}
+        AND status = 'success'
+    </select>
+
+    <select id="getUserFundingList" parameterType="hashmap" resultType="hashmap">
+        SELECT
+        t1.handyon_id
+        , t1.odrNm
+        , t1.status
+        , t5.cate_name
+        , t2.title
+        , t2.summary
+        , t2.begin_date
+        , t2.end_date
+        , t2.sponsor_price
+        , t2.sponsor_personnel
+        , LEFT(t2.reg_date, 10) AS reg_date
+        , LEFT(t1.reg_date, 10) AS funding_date
+        <if test="status != null and status == 'cancel'">
+            ,LEFT(t1.cancel_date, 10) AS cancel_date
+        </if>
+        , SUM(price) AS price
+        , DATEDIFF(t2.end_date, NOW()) AS d_day
+        , (CASE WHEN DATEDIFF(t2.end_date, NOW()) >= 0 THEN '펀딩중'
+        WHEN DATEDIFF(t2.end_date, NOW()) <![CDATA[<]]> 0 THEN '종료'
+        END) AS funding_status
+        , (CASE WHEN t1.status = 'success' THEN '성공'
+        WHEN t1.status = 'cancel' THEN '취소'
+        END) AS odr_status
+        , t2.current_price
+        , t2.current_personnel
+        , t3.artist_kname
+        , t4.brand_name
+        FROM
+        user_funding t1
+        LEFT JOIN handyon_info t2 ON t1.handyon_id = t2.handyon_id
+        LEFT JOIN artist_info t3 ON t2.artist_id = t3.artist_id
+        LEFT JOIN brand_info t4 ON t2.brand_id = t4.brand_id
+        LEFT JOIN category_info t5 ON t2.cate_id = t5.cate_id
+        WHERE user_info_id = #{user_info_id}
+        <if test="status != null and status != ''">
+            AND t1.status = #{status}
+        </if>
+        GROUP BY odrNm
+        <choose>
+            <when test="status != null and status == 'cancel'"> ORDER BY t1.cancel_date DESC </when>
+            <otherwise> ORDER BY t1.reg_date DESC </otherwise>
+        </choose>
+        <if test="limitSize != null"> LIMIT ${limitSize}, ${pageSize} </if>
+    </select>
+
+    <select id="getUserFunding" parameterType="hashmap" resultType="hashmap">
+        SELECT
+        t1.handyon_id
+        , t1.odrNm
+        , t1.status
+        , t5.cate_name
+        , t2.title
+        , t2.summary
+        , t2.begin_date
+        , t2.end_date
+        , t2.sponsor_price
+        , t2.sponsor_personnel
+        , LEFT(t2.reg_date, 10) AS reg_date
+        , LEFT(t1.reg_date, 10) AS funding_date
+        <if test="status != null and status == 'cancel'">
+            ,LEFT(t1.cancel_date, 10) AS cancel_date
+        </if>
+        , SUM(price) AS price
+        , DATEDIFF(t2.end_date, NOW()) AS d_day
+        , (CASE WHEN DATEDIFF(t2.end_date, NOW()) >= 0 THEN '펀딩중'
+        WHEN DATEDIFF(t2.end_date, NOW()) <![CDATA[<]]> 0 THEN '종료'
+        END) AS funding_status
+        , (CASE WHEN t1.status = 'success' THEN '성공'
+        WHEN t1.status = 'cancel' THEN '취소'
+        END) AS odr_status
+        , t2.current_price
+        , t2.current_personnel
+        , t3.artist_kname
+        , t4.brand_name
+        FROM
+        user_funding t1
+        LEFT JOIN handyon_info t2 ON t1.handyon_id = t2.handyon_id
+        LEFT JOIN artist_info t3 ON t2.artist_id = t3.artist_id
+        LEFT JOIN brand_info t4 ON t2.brand_id = t4.brand_id
+        LEFT JOIN category_info t5 ON t2.cate_id = t5.cate_id
+        WHERE t1.user_info_id = #{user_info_id}
+        AND t1.odrNm = #{odrNm}
+        <if test="status != null and status != ''">
+            AND t1.status = #{status}
+        </if>
+    </select>
+
+
+    <select id="getUserInquiryCount" parameterType="hashmap" resultType="int">
+        SELECT COUNT(*) FROM board_article
+        WHERE board_id = '1024'
+        <if test="user_info_id != null and user_info_id != ''">
+            AND reg_id = #{user_info_id}
+        </if>
+    </select>
+
+    <select id="getUserInquiryList" parameterType="hashmap" resultType="hashmap">
+        SELECT
+        article_id
+        , board_id
+        , title
+        , content
+        , reply_id
+        , (CASE WHEN reply_id IS NULL THEN '확인중'
+        WHEN  reply_id IS NOT NULL THEN '답변완료'
+        END) AS status
+        , reg_id
+        , LEFT(reg_date, 10) AS reg_date
+        FROM board_article
+        WHERE board_id = '1024'
+        AND reg_id = #{user_info_id}
+        ORDER BY reg_date DESC
+        <if test="limitSize != null"> LIMIT ${limitSize}, ${pageSize} </if>
+    </select>
+
+    <select id="getUserInquiry" parameterType="hashmap" resultType="hashmap">
+        SELECT
+        article_id
+        , board_id
+        , title
+        , content
+        , reply_id
+        , reply
+        , reg_id
+        , LEFT(reg_date, 10) AS reg_date
+        , LEFT(reply_date, 10) AS reply_date
+        FROM board_article
+        WHERE board_id = '1024'
+        AND article_id = #{article_id}
+        AND reg_id = #{user_info_id}
+    </select>
+    -->
 
 
 </mapper>
