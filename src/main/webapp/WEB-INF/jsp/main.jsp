@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <jsp:include page="/WEB-INF/jsp/inc/front_meta.jsp"/>
+    <!-- ================== CSS STYLE ================== -->
+    <!-- Reset CSS -->
     <link rel="import" href="header.html">
     <link rel="stylesheet" href="static/css/default.css">
     <link rel="stylesheet" href="static/css/common.css">
@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="static/css/footer.css">
     <link rel="stylesheet" href="static/css/main.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <!-- ================ //CSS STYLE ================== -->
     <title>NORAN</title>
 </head>
 <body>
