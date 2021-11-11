@@ -41,7 +41,7 @@
     </form>
     <button class="btn_login">로그인</button>
     <ul class="login_list">
-      <li><a href="member.jsp">회원가입</a></li>
+      <li><a href="<%=request.getContextPath()%>/join_agreement.do" class="login">회원가입</a></li>
       <li><a href="#">아이디 찾기</a></li>
       <li><a href="#">비밀번호 재설정</a></li>
     </ul>
