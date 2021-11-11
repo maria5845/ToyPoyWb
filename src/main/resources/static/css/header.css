@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+/* header */
+header {position:relative; width: 1200px; margin: 30px auto; text-align: center; justify-content: space-between; align-items: center;}
+/* header .logo {position: relative; float: left; left: 40px;} */
+header .logo {float:left; margin-left: 46px;}
+header .logo img {width: 90px;}
+header .search_wrap {position:absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); line-height: 75px; width: 360px; height: 32px; border-radius: 25px; border: 1px solid gray; background-color: #fff;}
+header .search_wrap #srch_bar {border: none; background: none; width:280px; height: 26px; position: absolute; top: 3px; left: 10px;}
+header .search_wrap .btn_srch {border: none; background: none; position: absolute; top: 50%; right: 5px; transform: translateY(-50%);}
+header .myMenu {float: right;}
+header .myMenu ul li{float: left; padding: 14px; position: relative;}
+header .myMenu ul li a:hover{border-bottom: 1px solid #000;}
+header .myMenu ul li~li::before{content: ''; display: block; width: 1px; height: 10px; background: var(--lgray); position: absolute; top: 50%; left: 2px; transform: translateY(-50%);}
+
+/* nav */
+nav {width: 100%; height:60px; line-height: 60px; border: solid var(--lgray); border-width: 1px 0;}
+nav .nav_wrap {width: 1200px; height: 100%; margin: 0 auto;}
+nav .nav_wrap > div {float: left;}
+nav .gnb > li {float: left; height:100%; font-size: 20px; padding: 0 20px;}
+nav .gnb > li a{display:block; width:100%; height:100%;}
+nav .gnb .time_sale {color: #e78111;}
+
+nav .total_menu {width: 150px;}
+nav .total_menu_tit li {position: relative; width: 110px; margin-right: 200px; text-align: right; cursor: pointer; }
+nav .total_menu_sub {position: absolute; width: 150px; height: 410px; top: 60px; left: 0; background: #fff; color:var(--gray); border: 1px solid var(--lgray); z-index: 10; display: none;}
+nav .total_menu_sub li {width:100%; font-size: 17px;}
+nav .total_menu_sub li a{display: block; width: 100%; height: 100%; text-align: center;}
+nav .total_menu_sub li a:hover {color: #000;}
+nav .gnb_con {position: absolute; top: 22px;}
+nav .gnb_con span {display: block; width: 20px; height: 2px; background: #000; margin-bottom: 6px;}
