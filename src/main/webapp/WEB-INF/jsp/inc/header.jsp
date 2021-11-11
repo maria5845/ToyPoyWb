@@ -18,7 +18,7 @@
   </div>
   <div class="myMenu">
     <ul>
-      <li><a href="login.jsp">로그인</a></li>
+      <li><a href="../login.jsp">로그인</a></li>
       <li><a href="#">마이페이지</a></li>
       <li><a href="#">장바구니</a></li>
     </ul>

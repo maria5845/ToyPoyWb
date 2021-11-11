@@ -32,9 +32,9 @@
                     <label for="loginSet">아이디저장</label>
                 </span>
         <span>
-                    <input type="checkbox" id="remember_login">
-                    <label for="remember_login">로그인 유지</label>
-                </span>
+                <input type="checkbox" id="remember_login">
+                <label for="remember_login">로그인 유지</label>
+        </span>
       </div>
     </form>
     <button class="btn_login">로그인</button>

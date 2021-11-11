@@ -1,0 +1,19 @@
+@charset "utf-8";
+#container {position:relative; width: 1200px; margin: 90px auto 0;}
+#container h2::after {content: ''; display: block; width: 1200px; height: 1px; background: #000; margin-top: 20px;}
+#container .depth {position: absolute; right: 10px; top: 10px;}
+#container .depth ul li {float: left; color: var(--gray);}
+#container .depth ul li.active {color:#000;}
+#container .depth ul li.active::after {background-image: url(../images/main/icon_join_step_on.png);}
+#container .depth ul li::after {content: ''; display: inline-block; width: 10px; height: 10px; background: url(../images/main/icon_join_depth_off.png) no-repeat 0 0 / contain; margin: 0 10px;}
+#container .depth ul li:last-of-type::after {display: none;}
+main {width: 740px; margin: 90px auto 0;}
+main h3 {font-size: 20px;}
+main h3::after {content: ''; display: block; width: 740px; height: 1px; background: var(--gray); margin: 10px 0 50px;}
+main .agreement_wrap01 {margin-bottom: 40px;}
+main .agreement_box {overflow-x: hidden; overflow-y: auto; height: 100px; margin: 10px 0 0; padding: 20px; border: 1px solid var(--gray);}
+main .agreement_wrap01 input#agree_a {position: relative; top: 6px; width: 20px; height: 20px;}
+main .agreement_wrap02 input#agree_b {position: relative; top: 6px; width: 20px; height: 20px;}
+main .btn_join {width: 740px; text-align: center; font-weight: bold; font-size: 17px;}
+main .btn_join button {width: 200px; height: 60px; margin: 34px 20px 0 20px; cursor: pointer; background: none; border: 1px solid var(--gray); font-size: 15px;}
+main .btn_join .join_accept {background: var(--yellow); ;}
