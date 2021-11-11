@@ -14,8 +14,7 @@ public class MainService {
     MainDao dao;
 
     public String timeToString(){
-        String timeString = dao.selectTest();
-        return timeString;
+        return dao.selectTest();
     };
 
 
