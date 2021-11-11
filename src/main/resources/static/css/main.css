@@ -1,3 +1,9 @@
 @charset "utf-8";
 
-.commend {display: flex; width: 1440px; margin: 0 auto}
+.commend {display: flex; width: 1440px; margin: 100px auto;}
+.how_pd {width: 854px;}
+.how_pd ul {display: flex;}
+.how_pd ul li {width: 240px; padding-right: 24px;}
+.lank {width: 367px;}
+.lank ul li {display: flex; height: 60px;}
+.lank_txt{padding: 0 20px; box-sizing: border-box;}

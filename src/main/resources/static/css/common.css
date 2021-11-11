@@ -24,7 +24,7 @@ img {width: 100%;}
 .fb {font-weight: 600;}
 .color_g {color: var(--gray);}
 /* 공통 */
-h2.tit {font-size: 30px; line-height: 40px;}
+h2.tit {font-size: 30px; line-height: 40px; text-align: center}
 .pd_name { font-size: 16px; padding: 16px 0 30px;}
 .pd_price { font-size: 22px; font-weight: 600;}
 .add_cart {position:absolute; display:block; width: 30px; height: 30px; bottom:0; right:10px; background: url(../images/main/ico_cart.png) no-repeat 0 0 / contain;}
