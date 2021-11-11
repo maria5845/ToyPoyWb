@@ -9,14 +9,15 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <jsp:include page="/WEB-INF/jsp/inc/front_meta.jsp"/>
+  <!-- ================== CSS STYLE ================== -->
+  <!-- Reset CSS -->
   <link rel="stylesheet" href="./static/css/default.css">
   <link rel="stylesheet" href="./static/css/common.css">
   <link rel="stylesheet" href="./static/css/header.css">
   <link rel="stylesheet" href="./static/css/footer.css">
   <link rel="stylesheet" href="./static/css/member.css">
+  <!-- ================ //CSS STYLE ================== -->
   <title>회원가입 | NORAN</title>
 </head>
 <body>

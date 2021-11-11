@@ -21,7 +21,67 @@
         <h2 class="tit">이 제품은 어떠세요?</h2>
         <ul>
             <li>
-                <a href="">
+                <a href="#">
+                    <div>
+                        <div class="sale">10%</div>
+                        <img src="static/images/main_pd.jpg" alt="상품">
+                    </div>
+                    <div>
+                        <strong>크리스마스 선물 조명 장식 용품 전구 인테리어 무드등 프로모션</strong>
+                        <span>10,000</span><span>원</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div>
+                        <div class="sale">10%</div>
+                        <img src="static/images/main_pd.jpg" alt="상품">
+                    </div>
+                    <div>
+                        <strong>크리스마스 선물 조명 장식 용품 전구 인테리어 무드등 프로모션</strong>
+                        <span>10,000</span><span>원</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div>
+                        <div class="sale">10%</div>
+                        <img src="static/images/main_pd.jpg" alt="상품">
+                    </div>
+                    <div>
+                        <strong>크리스마스 선물 조명 장식 용품 전구 인테리어 무드등 프로모션</strong>
+                        <span>10,000</span><span>원</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div>
+                        <div class="sale">10%</div>
+                        <img src="static/images/main_pd.jpg" alt="상품">
+                    </div>
+                    <div>
+                        <strong>크리스마스 선물 조명 장식 용품 전구 인테리어 무드등 프로모션</strong>
+                        <span>10,000</span><span>원</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div>
+                        <div class="sale">10%</div>
+                        <img src="static/images/main_pd.jpg" alt="상품">
+                    </div>
+                    <div>
+                        <strong>크리스마스 선물 조명 장식 용품 전구 인테리어 무드등 프로모션</strong>
+                        <span>10,000</span><span>원</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
                     <div>
                         <div class="sale">10%</div>
                         <img src="static/images/main_pd.jpg" alt="상품">
