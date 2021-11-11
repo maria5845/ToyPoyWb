@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="./static/css/default.css">
   <link rel="stylesheet" href="./static/css/common.css">
   <link rel="stylesheet" href="./static/css/header.css">
+  <link rel="stylesheet" href="./static/css/footer.css">
   <link rel="stylesheet" href="./static/css/join_member.css">
   <title>쇼핑몰 회원가입 | NORAN</title>
 </head>

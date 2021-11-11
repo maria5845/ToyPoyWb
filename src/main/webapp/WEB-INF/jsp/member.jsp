@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="./static/css/default.css">
   <link rel="stylesheet" href="./static/css/common.css">
   <link rel="stylesheet" href="./static/css/header.css">
+  <link rel="stylesheet" href="./static/css/footer.css">
   <link rel="stylesheet" href="./static/css/member.css">
   <title>회원가입 | NORAN</title>
 </head>

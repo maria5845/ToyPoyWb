@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="static/css/default.css">
     <link rel="stylesheet" href="static/css/common.css">
     <link rel="stylesheet" href="static/css/header.css">
+    <link rel="stylesheet" href="static/css/footer.css">
     <link rel="stylesheet" href="static/css/main.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <title>NORAN</title>
