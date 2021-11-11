@@ -1,0 +1,9 @@
+@charset "utf-8";
+#wrap {width: 600px; height: 445px; border: 1px solid var(--lgray); margin: 90px auto 0; text-align: center; padding: 70px; box-sizing: border-box;}
+#wrap div {width: 450px; height: 64px; line-height: 64px; margin: 0 auto;}
+#wrap div>a {display:block; width: 100%; height: 100%;}
+#wrap .login_shop {background: var(--yellow); font-size: 17px;}
+#wrap .sns_login {position:relative; border: 1px solid var(--gray); font-size: 17px; color: var(--gray);}
+#wrap .login_naver {margin: 86px 0 20px;}
+#wrap .sns_login::before {content: ''; position:absolute; display:block; top:50%; left:60px; width: 50px; height: 50px; background: url(../images/main/sns_icon_naver.png) no-repeat 0 50% / contain; transform: translateY(-50%);}
+#wrap .login_kakao::before {background-image: url(../images/main/sns_icon_kakao.png);}
