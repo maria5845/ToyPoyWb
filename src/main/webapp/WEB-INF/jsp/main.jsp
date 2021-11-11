@@ -24,7 +24,7 @@
             <li>
                 <a href="#">
                     <div>
-                        <div class="sale">10%</div>
+                        <div class="sale_per">10<span class="ico_per">%</span></div>
                         <img src="static/images/main_pd.jpg" alt="상품">
                     </div>
                     <div>
@@ -36,7 +36,7 @@
             <li>
                 <a href="#">
                     <div>
-                        <div class="sale">10%</div>
+                        <div class="sale_per">10<span class="ico_per">%</span></div>
                         <img src="static/images/main_pd.jpg" alt="상품">
                     </div>
                     <div>
@@ -48,7 +48,7 @@
             <li>
                 <a href="#">
                     <div>
-                        <div class="sale">10%</div>
+                        <div class="sale_per">10<span class="ico_per">%</span></div>
                         <img src="static/images/main_pd.jpg" alt="상품">
                     </div>
                     <div>
@@ -60,7 +60,7 @@
             <li>
                 <a href="#">
                     <div>
-                        <div class="sale">10%</div>
+                        <div class="sale_per">10<span class="ico_per">%</span></div>
                         <img src="static/images/main_pd.jpg" alt="상품">
                     </div>
                     <div>
@@ -72,7 +72,7 @@
             <li>
                 <a href="#">
                     <div>
-                        <div class="sale">10%</div>
+                        <div class="sale_per">10<span class="ico_per">%</span></div>
                         <img src="static/images/main_pd.jpg" alt="상품">
                     </div>
                     <div>
@@ -84,7 +84,7 @@
             <li>
                 <a href="#">
                     <div>
-                        <div class="sale">10%</div>
+                        <div class="sale_per">10<span class="ico_per">%</span></div>
                         <img src="static/images/main_pd.jpg" alt="상품">
                     </div>
                     <div>
