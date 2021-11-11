@@ -19,12 +19,12 @@
   <title>회원가입 | NORAN</title>
 </head>
 <body>
-<div id="headers"></div>
+<jsp:include page="/WEB-INF/jsp/inc/header.jsp"/>
 <main id="wrap" class="wrap">
   <div class="login_shop"><a href="join_shop.html">쇼핑몰 회원가입</a></div>
   <div class="sns_login login_naver"><a href="#">네이버 아이디 회원가입</a></div>
   <div class="sns_login login_kakao"><a href="#">카카오 아이디 회원가입</a></div>
 </main>
-<div id="footers"></div>
+<jsp:include page="/WEB-INF/jsp/inc/footer.jsp"/>
 </body>
 </html>

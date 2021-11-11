@@ -13,13 +13,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./static/css/default.css">
-  <link rel="stylesheet" href="./static/css/common.css"
+  <link rel="stylesheet" href="./static/css/common.css">
   <link rel="stylesheet" href="./static/css/header.css">
+  <link rel="stylesheet" href="./static/css/footer.css">
   <link rel="stylesheet" href="./static/css/join_agreement.css">
   <title>쇼핑몰 회원가입 | NORAN</title>
 </head>
 <body>
-<div id="headers"></div>
+<jsp:include page="/WEB-INF/jsp/inc/header.jsp"/>
 <section id="container" class="container">
   <header>
     <h2 class="tit">회원가입</h2>
@@ -280,6 +281,6 @@
     </div>
   </main>
 </section>
-<div id="footers"></div>
+<jsp:include page="/WEB-INF/jsp/inc/footer.jsp"/>
 </body>
 </html>

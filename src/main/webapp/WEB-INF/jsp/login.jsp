@@ -13,7 +13,7 @@
   <title>로그인 | NORAN</title>
 </head>
 <body>
-<div id="headers"></div>
+<jsp:include page="/WEB-INF/jsp/inc/header.jsp"/>
 <main>
   <section id="login_wrap">
     <!--로그인-->
@@ -46,6 +46,6 @@
     </ul>
   </section>
 </main>
-<div id="footers"></div>
+<jsp:include page="/WEB-INF/jsp/inc/footer.jsp"/>
 </body>
 </html>
