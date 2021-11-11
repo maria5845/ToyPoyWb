@@ -28,7 +28,6 @@ public class MainController {
         return "main";
     }
 
-
     @RequestMapping(value = "/login.do", method = {RequestMethod.GET, RequestMethod.POST})
     public String login(Model model, @RequestParam HashMap<String, Object> param) throws Exception {
         return "login";
