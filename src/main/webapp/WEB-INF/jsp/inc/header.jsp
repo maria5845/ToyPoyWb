@@ -7,7 +7,11 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <header class="clear">
-  <h1 class="logo"><a href="#"><img src="./static/images/logo_tem.png" alt="NORAN"/></a></h1>
+  <h1 class="logo">
+    <a href="<%=request.getContextPath()%>/main.do">
+      <img src="./static/images/logo_tem.png" alt="NORAN"/>
+    </a>
+  </h1>
   <div class="search_wrap">
     <fieldset>
       <legend>검색영역</legend>
@@ -18,7 +22,7 @@
   </div>
   <div class="myMenu">
     <ul>
-      <li><a href="<%=request.getContextPath()%>/login.do"  class="login">로그인</a></li>
+      <li><a href="<%=request.getContextPath()%>/login.do" class="login">로그인</a></li>
       <li><a href="#">마이페이지</a></li>
       <li><a href="#">장바구니</a></li>
     </ul>

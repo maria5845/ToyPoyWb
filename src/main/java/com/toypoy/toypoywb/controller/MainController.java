@@ -33,10 +33,4 @@ public class MainController {
         return "login";
     }
 
-    @RequestMapping(value = "/loginX.do", method = RequestMethod.POST)
-    public String loginX(Model model, @RequestParam HashMap<String, Object> param) throws Exception {
-
-        return "redirect:/";
-    }
-
 }
