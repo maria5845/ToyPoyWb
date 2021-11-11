@@ -32,5 +32,14 @@ public class MainController {
     public String login(Model model, @RequestParam HashMap<String, Object> param) throws Exception {
         return "login";
     }
+    @RequestMapping(value = "/join_agreement.do", method = {RequestMethod.GET, RequestMethod.POST})
+    public String joinAgreementPage(Model model, @RequestParam HashMap<String, Object> param) throws Exception {
+        return "join_agreement";
+    }
+
+    @RequestMapping(value = "/join_member_page.do", method = {RequestMethod.GET, RequestMethod.POST})
+    public String joinMemberPage(Model model, @RequestParam HashMap<String, Object> param) throws Exception {
+        return "join_member";
+    }
 
 }

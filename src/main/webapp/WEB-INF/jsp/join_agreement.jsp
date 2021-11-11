@@ -278,8 +278,12 @@
       </div>
     </div>
     <div class="btn_join">
+      <a class ="join_before" href="<%=request.getContextPath()%>/login.do">이전단계</a>
+      <a class ="join_accept" href="<%=request.getContextPath()%>/join_member_page.do">다음단계</a>
+      <!--
       <button class="join_before">이전단계</button>
       <button class="join_accept">다음단계</button>
+      -->
     </div>
   </main>
 </section>
