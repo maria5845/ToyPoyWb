@@ -1,0 +1,174 @@
+@charset "utf-8";
+@import url("../../../../../../../../../../workspace/handyon/handyonAdmin/src/main/webapp/assets/css/fonts.css");
+@import url("../../../../../../../../../../workspace/handyon/handyonAdmin/src/main/webapp/assets/css/font-awesome.css");
+@import url("../../../../../../../../../../workspace/handyon/handyonAdmin/src/main/webapp/assets/css/modify.css");
+
+/* 테마일괄 적용 aqua,black,blue,green,indigo,lime,orange,pink,purple,red,teal,yellow*/
+@import url("../../../../../../../../../../workspace/handyon/handyonAdmin/src/main/webapp/assets/css/default/theme/blue.min.css");
+
+/* All */
+html, body { 
+    height:100%; 
+    font-family: 'NotoSansKR', sans-serif;
+    /*
+    font-family: 'NanumGothic', sans-serif;
+    font-family: 'NanumSquare';
+    font-family: 'DINMed'; 숫자추천폰트
+    font-family: 'Roboto', sans-serif;
+    */
+    /*app.min.css Default font-size: .75rem; = 12px*/
+    font-size: 14px !important;
+    font-weight: normal;
+    line-height: normal;
+}
+
+.inline { display: inline-block; width: auto;}
+.btn-area { padding-top: 5px; padding-bottom: 5px; text-align: right;}
+.search-box { font-weight: 600;}
+.search-box .form-group { padding: 0 5px; margin-bottom: 0;}
+.search-box .form-group input,
+.search-box .form-group select { margin-right: 5px; vertical-align: middle;}
+.search-box .input-daterange input { min-width: 105px; max-width: 105px;}
+.search-box select { min-width: 100px;}
+.header .btn-logout { vertical-align: middle; margin-top: -3px; margin-left: 5px; background: rgba(0, 0, 0, 0.3); border: none; }
+.sidebar .btn-logout { position: absolute; top: 25px; right: 20px; background: rgba(0, 0, 0, 0.7); border: none;}
+.nav-header i { margin-right: 10px;}
+.panel.search { margin-bottom: 5px;}
+
+/* 추가 */
+.form-control:focus { outline: none !important; box-shadow: none !important; border: 1px solid #5db0ff !important;}
+.form-control { box-shadow: none;}
+.zip-search { border: 3px solid rgba(0, 0, 0, .5) !important; }
+.panel-heading .btn ~ .btn { margin-left: 3px;}
+.data-ax5docker>div>div>div { padding-top:0 !important;}
+.data-ax5docker>div>div>div>ul { display:none !important;}
+.info-text { font-size: 12px; color: #ff2924;}
+td > input+.btn { padding: .4rem .75rem; vertical-align: middle; margin-top: -4px;}
+
+/* 로그인 */
+.login-find { display: inline-block; float: right; cursor: pointer; margin-right: 20px;}
+.mem-join { display: inline-block; float: right; cursor: pointer; color: rgba(255,255,255,.6) !important;}
+.mem-join:hover { text-decoration: none;}
+.login-content #loginBtn { font-size: 14px !important;}
+
+/* IDPW 찾기 */
+#find_idpw .modal-body { background: rgba(0, 0, 0, 0.05);}
+.panel.find-idpw { box-shadow: 0px 1px 3px rgba(0,0,0,0.15); box-shadow:none; border-top-left-radius: 0; border:none; }
+.tab-section .nav-pills > li > a { box-shadow:none; margin-right: 2px; margin-left: 1px;}
+.result_id { margin-top: 10px; padding-top: 20px; border-top: 1px solid #eee;}
+.result_id .info-tit { text-align: center; font-size: 14px;}
+.result_id .result-info,
+.result_pw .result-info { margin: 20px; padding: 20px; border-radius: 10px; border: 5px solid #FB8C00; text-align: center; }
+.result_id .result-info .result,
+.result_pw .result-info .result { font-size: 20px; font-weight: 600; margin-right: 20px;}
+.find-idpw .info-sm { padding: 10px 0; font-size: 12px;}
+.find-idpw .info-secret { padding: 10px 0; font-size: 14px; color:#FB8C00;}
+.find-idpw { border: 1px solid rgba(255,255,255,.4);}
+.input-certify { background: #ededed;}
+.tbl_line,.tbl_ver>tbody>tr>th,.tbl_ver>tbody>tr>td { border:0; font-size: .95rem; border-bottom:1px solid #dddee2;}
+.tbl_line {width:100%;font-size:12px;}
+.tbl_line caption { display:none; }
+.tbl_line>tbody>tr>th { padding:8px 10px; border-top:1px solid #dddee2; font-weight:bold; text-align:left; vertical-align:middle; }
+.tbl_line>tbody>tr>td { padding:8px 10px; border-top:1px solid #dddee2; line-height:16px; vertical-align:top}
+
+/* 회원가입 */
+.memjoin-wrap { width: 990px; margin: 0 auto !important; }
+.memjoin-wrap .content { margin-left: 0px;}
+.memjoin-wrap .footer  { margin-left: 30px; margin-right: 30px; padding-left: 0px; padding-right: 0px;}
+
+/* index-메인 */
+.main .panel .panel-body { padding: 15px;}
+.main .card-style02 .card-body { min-height: 215px;}
+.navbar-user .mem-info { display: block; text-decoration: none; line-height: 20px; padding: 15px; border: none; color: #fff; }
+.navbar-user .mem-info a { color: #fff; text-decoration: none;}
+
+/* datetimepicker */
+.input-group.date.inputonly { width: 15%; min-width: 100px; display: inline-flex;}
+.input-group.date.inputonly>.form-control:not(:last-child) { border-radius: 4px !important;}
+.input-group.date.inputonly .input-group-addon { pointer-events: none; display: none;}
+
+/* JquaryUI */
+.ui-dialog .ui-dialog-titlebar-close { border: 1px solid rgba(0, 0, 0, .5) ; border-radius: 4px;}
+.ui-dialog .ui-dialog-titlebar-close:focus { outline: 2px auto -webkit-focus-ring-color !important;}
+.ui-dialog .ui-dialog-titlebar-close::after { font-family: 'FontAwesome'; content: "\f00d"; color: rgba(0, 0, 0, .5); }
+.ui-dialog .ui-dialog-buttonpane button { 
+    font-family: 'NotoSansKR', sans-serif;
+    padding: .4rem 1rem; line-height: 1.4;
+    border-radius: 3px;
+    background-color: #348fe2!important; color: #fff !important;
+    border: none !important; border-radius: 4px; 
+    font-size: .85rem !important; font-weight: 500;}
+
+/* 보정 */
+.container-fluid.image-container .filename {overflow: hidden;}
+#bannerForm #sortable_items .item .container-fluid img + div { width: 70px; overflow: hidden;}
+td .radio, td .checkbox { margin-top:0;}
+
+/* IE 9+10 속성 */
+@media screen and (min-width:0\0) and (min-width: 768px) {
+}
+
+/* 미디어쿼리 ******************************************************/
+/* Extra small devices (portrait phones, less than 576px) *********/
+/* No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, ≥576px and up) ~sm*/
+@media (min-width: 576px) {
+    
+}
+
+/* Medium devices (tablets, ≥768px and up) ~md*/
+@media (min-width: 768px) {
+    .search-box .btn-search { /*float: right;*/ color: #fff; vertical-align: middle;}
+}
+
+/* Large devices (desktops, ≥992px and up) ~lg*/
+@media (min-width: 992px) {
+    .search-box { display: flex;}
+    .search-box h3 { display: inline-block; margin-right: 5px;}
+    .search-box h3::before { content: "ㆍ";}
+    .search-box h3 + div { display: inline-block;}
+    .search .panel-heading, .hid .panel-heading { display: none; }
+}
+
+/* Extra large devices (large desktops, ≥1200px and up) ~xl*/
+@media (min-width: 1200px) {
+    
+}
+
+@media (max-width: 991.98px) {
+    .search-box { display: block;}
+    
+    .schedule-calender .tbl_calender td .schedule { min-height: 40px; overflow: hidden;}
+    .fromto::after { content: '\A '; white-space: pre;}
+
+    /*.table-reaponsive { max-width: 990px; overflow-x: auto;}*/
+    .dataTables_wrapper .row:nth-child(2){ max-width: 990px; overflow-x: auto;}
+
+    .memjoin-wrap { width: 100%;}
+}
+
+/* mobile only */
+@media (max-width: 767px) {
+    .search-box select,
+    .search-box input,
+    .search-box .btn-search { display: block; width: 100%; margin-bottom: 2px;}
+    .search-box select { height: 30px !important;}
+
+    .memjoin-wrap { padding-top: 50px;}
+    .memjoin-wrap .footer  { margin-left: 20px; margin-right: 20px;}
+}
+/* Extra small devices (portrait phones, less than 576px) ≤xs*/
+@media (max-width: 575px) {
+    /* 모바일 스크롤 hidden */
+    ::-webkit-scrollbar { display: none;} 
+}
+
+
+
+
+
+/* ================== ADD-CUSTOM ================= */
+/* ================== 개발파트 수정 및 추가 ======= */
+
+/* =============== // ADD-CUSTOM ================= */
