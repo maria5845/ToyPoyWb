@@ -5,6 +5,9 @@ h2.tit {font-weight: bold; font-size: 24px;}
 .how_pd {width: 854px; border-right: 1px solid var(--lgray); padding-right: 80px; box-sizing: border-box;}
 .how_pd ul {display: flex; flex-flow: row wrap; justify-content: space-between;}
 .how_pd ul li {position:relative; width: 200px; margin-top: 30px;}
+.how_pd .pd_cart button {border: none; background: none; cursor: pointer; width: 40px; position: absolute;}
+.how_pd .pd_cart .btn_cart{bottom: -6px; right: 54px;}
+.how_pd .pd_cart .btn_like{bottom: -6px; right: 8px;}
 .sale_per {position:absolute; width: 44px; height: 44px; line-height: 44px; top:0; left: 0; background:#fff195; box-shadow:0 2px 1px rgb(0 0 0 / 17%); : #000; font-size:14px; text-align: center;}
 .ico_per {font-size: 12px; padding-left: 4px;}
 .lank {width: 426px; padding-left:60px; box-sizing: border-box; }

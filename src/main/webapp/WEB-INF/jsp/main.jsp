@@ -41,10 +41,8 @@
                                     <span class="pd_price">10,000</span><span>원</span>
                                 </div>
                                 <div class="pd_cart">
-                                    <ul>
-                                        <li class="btn_cart"><a href="#">장바구니</a></li>
-                                        <li class="btn_like"><a href="#">찜하기</a></li>
-                                    </ul>
+                                    <button class="btn_cart"><img src="static/images/ico_cart.png" alt="장바구니"/></button>
+                                    <button class="btn_like"><img src="static/images/ico_heart.png" alt="찜하기"/></button>
                                 </div>
                             </a>
                         </li>
