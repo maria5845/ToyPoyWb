@@ -1,12 +1,12 @@
 @charset "utf-8";
-#container {position:relative; width: 1280px; margin: 90px auto 0;}
+#container {position:relative; width: 1280px; margin: 50px auto 0;}
 #container header {margin-top: 0;}
 #container h2::after {content: ''; display: block; width: 1440px; height: 1px; background: var(--lgray); margin-top: 20px;}
 #container .depth {position: absolute; right: 200px; top: 10px;}
 #container .depth ul li {float: left; color: var(--gray);}
 #container .depth ul li.active {color:#000;}
-#container .depth ul li.active::after {background-image: url(../images/main/icon_join_step_on.png);}
-#container .depth ul li::after {content: ''; display: inline-block; width: 10px; height: 10px; background: url(../images/main/icon_join_depth_off.png) no-repeat 0 0 / contain; margin: 0 10px;}
+#container .depth ul li.active::after {background-image: url(/static/images/icon_join_step_on.png);}
+#container .depth ul li::after {content: ''; display: inline-block; width: 10px; height: 10px; background: url(/static/images/icon_join_depth_off.png) no-repeat 0 0 / contain; margin: 0 10px;}
 #container .depth ul li:last-of-type::after {display: none;}
 main {width: 740px; margin: 90px auto;}
 main h3 {font-size: 20px;}
@@ -23,8 +23,9 @@ main .mail_check input {position: relative; top: 6px; width: 20px; height: 20px;
 main table tr #emailDomain {width: 170px; height: 24px;}
 main .phone_check {height: 35px; line-height: 35px; padding-bottom: 10px;}
 main .phone_check input {position: relative; top: 6px; width: 20px; height: 20px;}
-main .btn_join {width: 740px; text-align: center; font-weight: bold;}
-main .btn_join button {width: 200px; height: 60px; margin: 34px 20px 0 20px; cursor: pointer; background: none; border:none; font-size: 15px;}
-main .btn_join .join_before {background: var(--lgray);}
+main .btn_join {width: 740px; text-align: center;}
+main .btn_join button {display:inline-block; width: 200px; height: 60px; line-height: 60px; text-align: center; margin: 42px 20px 0 20px; cursor: pointer; background: none; border: solid #e6d352; border-width: 0 1px 6px 1px; border-radius: 6px;  font-weight: bold; font-size: 17px;}
+main .btn_join button:hover, main .btn_join button:active {border-width: 0 1px 3px 1px;}
+main .btn_join .join_before {background: var(--lgray); border-color:#dfdfdf;}
 main .btn_join .join_accept {background: var(--yellow);}
 

@@ -10,14 +10,20 @@
 <html lang="ko">
 <head>
     <jsp:include page="/WEB-INF/jsp/inc/front_meta.jsp"/>
+    <link rel="import" href="header.html">
+
     <!-- ================== CSS STYLE ================== -->
     <!-- Reset CSS -->
-  <link rel="stylesheet" href="./static/css/default.css">
-  <link rel="stylesheet" href="./static/css/common.css">
-  <link rel="stylesheet" href="./static/css/header.css">
-  <link rel="stylesheet" href="./static/css/footer.css">
-  <link rel="stylesheet" href="./static/css/join_member.css">
+    <link rel="stylesheet" href="static/css/default.css">
+    <link rel="stylesheet" href="static/css/common.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/header.css">
+    <link rel="stylesheet" href="static/css/footer.css">
+    <link rel="stylesheet" href="./static/css/join_member.css">
     <!-- ================ //CSS STYLE ================== -->
+
   <title>쇼핑몰 회원가입 | NORAN</title>
 </head>
 <body>
