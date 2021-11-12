@@ -1,6 +1,6 @@
 package com.toypoy.toypoywb.admin;
 
-import lombok.Value;
+
 import org.json.simple.JSONObject;
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
@@ -20,7 +20,7 @@ public class BoardController {
     /*
     @Value("${file.root.dir}")
     private String fileRootDir;
-     */
+    */
 
     @RequestMapping(value={"/admin/boardList.do"},method = {RequestMethod.GET})
     public String boardList(Model model, HttpServletRequest request) throws  Exception{
@@ -57,6 +57,7 @@ public class BoardController {
         return json.toString();
     }
    */
+
 
 
 
