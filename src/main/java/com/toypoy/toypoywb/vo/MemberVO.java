@@ -45,7 +45,6 @@ public class MemberVO {
         if (loginPassword == null) {
             return false;
         }
-
         return loginPassword.equals(Member_pw);
     }
 
