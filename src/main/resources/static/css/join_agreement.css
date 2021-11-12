@@ -1,8 +1,8 @@
 @charset "utf-8";
-#container {position:relative; width: 1440px; margin: 90px auto 0;}
+#container {position:relative; width: 1280px; margin: 90px auto 0;}
 #container header {margin-top: 0;}
 #container h2::after {content: ''; display: block; width: 1400px; height: 1px; background: var(--lgray); margin-top: 20px;}
-#container .depth {position: absolute; right: 200px; top: 10px;}
+#container .depth {position: absolute; right: 200px;s top: 10px;}
 #container .depth ul li {float: left; color: var(--gray);}
 #container .depth ul li.active {color:#000;}
 #container .depth ul li.active::after {background-image: url(../images/main/icon_join_step_on.png);}

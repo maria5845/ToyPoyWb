@@ -1,10 +1,10 @@
 @charset "utf-8";
 footer {width: 100%; height: 200px; border-top: 1px solid gray;}
 footer .info_list {width: 100%; height: 55px; line-height: 55px; border-bottom: 1px solid gray;}
-footer .info_list ul {width: 1440px; height: 100%; margin: 0 auto;}
+footer .info_list ul {width: 1280px; height: 100%; margin: 0 auto;}
 footer .info_list li{float: left; padding: 0 30px;}
 footer .info_list li:first-child {padding-left: 0;}
-footer .info_box {width: 1440px; margin: 0 auto; padding: 40px 0;}
+footer .info_box {width: 1280px; margin: 0 auto; padding: 40px 0;}
 footer .info_box p {position: relative; float: left; margin-left: 7px; padding-left: 8px; color: var(--gray); font-size: 13px;}
 footer .info_box p:nth-child(1), footer .info_box p:nth-child(4), footer .info_box p:nth-child(5), footer .info_box p:last-of-type {clear: both; margin-left: 0; padding-left: 0;}
 footer .info_box p:nth-child(1)::after, footer .info_box p:nth-child(2)::after {content: ''; position: absolute; display: block; top: 8px; right: -6px; width: 1px; height: 10px; background: var(--gray);}
