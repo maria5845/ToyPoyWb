@@ -17,6 +17,6 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="웹문서의 제목 현재 페이지(콘텐츠)의 제목"/>
 <meta property="og:description" content="현재 페이지(콘텐츠)에 대한 설명"/>
-<meta property="og:image" content="./images/logo_tem.png""/>
+<meta property="og:image" content="static/images/logo_tem.png"/>
 
-<link rel="shortcut icon" href="./images/logo_tem.png"/>
+<link rel="shortcut icon" href="static/images/logo_tem.png"/>
