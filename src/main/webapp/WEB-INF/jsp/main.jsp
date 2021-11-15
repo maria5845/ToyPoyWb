@@ -9,13 +9,20 @@
     <!-- Reset CSS -->
     <link rel="stylesheet" href="static/css/default.css">
     <link rel="stylesheet" href="static/css/common.css">
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <!-- bxslider CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="static/css/header.css">
     <link rel="stylesheet" href="static/css/footer.css">
     <link rel="stylesheet" href="static/css/main.css">
-    <!-- ================ //CSS STYLE ================== -->\
+    <!-- ================ //CSS STYLE ================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.slider').bxSlider();
+        });
+    </script>
     <title>NORAN</title>
 </head>
 <body>
@@ -24,11 +31,18 @@
     <!-- //header -->
 
     <div id="container" class="container">
+        <div class="main_slide">
+            <div class="slider">
+                <div><a href="#"><img src="static/images/main_banner.jpg" alt="상품"></a></div>
+                <div><a href="#">두번째 슬라이드</a></div>
+            </div>
+        </div><!-- //main_slide-->
         <div class="commend">
             <div class="commend_wrap">
                 <!-- how_pd -->
                 <section class="how_pd">
-                    <h2 class="tit" style="text-align: left">이 제품은 어떠세요?</h2>
+                    <h2 class="tit">이 제품은 어떠세요?</h2>
+                    <a href="#" class="btn_more">더보기 &rsaquo;</a>
                     <ul>
                         <li>
                             <a href="#">
@@ -56,6 +70,10 @@
                                     <strong class="pd_tit">크리스마스 선물 조명 장식 용품 전구 인테리어 무드등 프로모션</strong>
                                     <span class="pd_price">10,000</span><span>원</span>
                                 </div>
+                                <div class="pd_cart">
+                                    <button class="btn_cart"><img src="static/images/ico_cart.png" alt="장바구니"/></button>
+                                    <button class="btn_like"><img src="static/images/ico_heart.png" alt="찜하기"/></button>
+                                </div>
                             </a>
                         </li>
                         <li>
@@ -68,17 +86,9 @@
                                     <strong class="pd_tit">크리스마스 선물 조명 장식 용품 전구 인테리어 무드등 프로모션</strong>
                                     <span class="pd_price">10,000</span><span>원</span>
                                 </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="sale_badge">
-                                    <div class="sale_per">10<span class="ico_per">%</span></div>
-                                    <img src="static/images/main_pd2.png" alt="상품">
-                                </div>
-                                <div class="pd_txt">
-                                    <strong class="pd_tit">건드 노래하는 곰인형 태태/곰인형 생일선물 조카선물 여친선물</strong>
-                                    <span class="pd_price">10,000</span><span>원</span>
+                                <div class="pd_cart">
+                                    <button class="btn_cart"><img src="static/images/ico_cart.png" alt="장바구니"/></button>
+                                    <button class="btn_like"><img src="static/images/ico_heart.png" alt="찜하기"/></button>
                                 </div>
                             </a>
                         </li>
@@ -92,6 +102,10 @@
                                     <strong class="pd_tit">건드 노래하는 곰인형 태태/곰인형 생일선물 조카선물 여친선물</strong>
                                     <span class="pd_price">10,000</span><span>원</span>
                                 </div>
+                                <div class="pd_cart">
+                                    <button class="btn_cart"><img src="static/images/ico_cart.png" alt="장바구니"/></button>
+                                    <button class="btn_like"><img src="static/images/ico_heart.png" alt="찜하기"/></button>
+                                </div>
                             </a>
                         </li>
                         <li>
@@ -103,6 +117,26 @@
                                 <div class="pd_txt">
                                     <strong class="pd_tit">건드 노래하는 곰인형 태태/곰인형 생일선물 조카선물 여친선물</strong>
                                     <span class="pd_price">10,000</span><span>원</span>
+                                </div>
+                                <div class="pd_cart">
+                                    <button class="btn_cart"><img src="static/images/ico_cart.png" alt="장바구니"/></button>
+                                    <button class="btn_like"><img src="static/images/ico_heart.png" alt="찜하기"/></button>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="sale_badge">
+                                    <div class="sale_per">10<span class="ico_per">%</span></div>
+                                    <img src="static/images/main_pd2.png" alt="상품">
+                                </div>
+                                <div class="pd_txt">
+                                    <strong class="pd_tit">건드 노래하는 곰인형 태태/곰인형 생일선물 조카선물 여친선물</strong>
+                                    <span class="pd_price">10,000</span><span>원</span>
+                                </div>
+                                <div class="pd_cart">
+                                    <button class="btn_cart"><img src="static/images/ico_cart.png" alt="장바구니"/></button>
+                                    <button class="btn_like"><img src="static/images/ico_heart.png" alt="찜하기"/></button>
                                 </div>
                             </a>
                         </li>
@@ -200,8 +234,261 @@
                     </ul>
                 </section>
                 <!-- //lank -->
-            </div>
-        </div>
+            </div><!-- //commend_wrap -->
+        </div><!-- //commend -->
+        <div class="md_pick">
+            <div class="md_pick_wrap">
+                <h2 class="tit">MD 추천상품</h2>
+                <a href="#" class="btn_more">더보기 &rsaquo;</a>
+                <ul class="md_list">
+                    <li>
+                        <a href="#">
+                            <img src="static/images/main_pd3.png" alt="상품">
+                            <p>프리저브드플라워 미니꽃다발 플라워박스+유리병편지 카드</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="static/images/main_pd3.png" alt="상품">
+                            <p>프리저브드플라워 미니꽃다발 플라워박스+유리병편지 카드</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="static/images/main_pd3.png" alt="상품">
+                            <p>프리저브드플라워 미니꽃다발 플라워박스+유리병편지 카드</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="static/images/main_pd.jpg" alt="상품">
+                            <p>크리스마스 선물 조명 장식 용품 전구 인테리어 무드등 프로모션</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="static/images/main_pd.jpg" alt="상품">
+                            <p>크리스마스 선물 조명 장식 용품 전구 인테리어 무드등 프로모션</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="static/images/main_pd.jpg" alt="상품">
+                            <p>크리스마스 선물 조명 장식 용품 전구 인테리어 무드등 프로모션</p>
+                        </a>
+                    </li>
+                </ul>
+            </div><!-- //md_pick -->
+        </div><!-- //md_pick_wrap -->
+        <div class="user_choice">
+            <div class="user_choice_wrap">
+                <h2 class="tit">회원님이 좋아할 추천상품</h2>
+                <ul class="choice_list">
+                    <li>
+                        <a href="#">
+                            <img src="static/images/main_pd3.png" alt="상품">
+                            <p>프리저브드플라워 미니꽃다발 플라워박스+유리병편지 카드</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="static/images/main_pd3.png" alt="상품">
+                            <p>프리저브드플라워 미니꽃다발 플라워박스+유리병편지 카드</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="static/images/main_pd3.png" alt="상품">
+                            <p>프리저브드플라워 미니꽃다발 플라워박스+유리병편지 카드</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="static/images/main_pd3.png" alt="상품">
+                            <p>프리저브드플라워 미니꽃다발 플라워박스+유리병편지 카드</p>
+                        </a>
+                    </li>
+                    <li class="choice_event">
+                        <a href="#">
+                            <div><img src="static/images/main_pd4.jpg" alt="상품"></div>
+                            <p>가습+수족관+가드닝, 아큐가든 하나로! 관리는 4개월에 딱 한 번만!</p>
+                        </a>
+                    </li>
+                </ul>
+            </div><!--//user_choice_wrap-->
+        </div><!-- //user_choice -->
+        <div class="event">
+            <div class="event_wrap">
+                <ul class="event_list">
+                    <li>
+                        <a href="#">
+                            <div class="banner_img"><img src="static/images/tmp_join_event.jpg" alt="상품"></div>
+                            <div class="banner_txt">
+                                <strong>와디즈 신규 가입 이벤트</strong>
+                                <span>놓치면 안 될 4가지 혜택!</span>
+                            </div>
+                            <a href="" class="event_view">보러가기</a>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="banner_img"><img src="static/images/tmp_join_event.jpg" alt="상품"></div>
+                            <div class="banner_txt">
+                                <strong>와디즈 신규 가입 이벤트</strong>
+                                <span>놓치면 안 될 4가지 혜택!</span>
+                            </div>
+                            <a href="" class="event_view">보러가기</a>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="banner_img"><img src="static/images/tmp_join_event.jpg" alt="상품"></div>
+                            <div class="banner_txt">
+                                <strong>와디즈 신규 가입 이벤트</strong>
+                                <span>놓치면 안 될 4가지 혜택!</span>
+                            </div>
+                            <a href="" class="event_view">보러가기</a>
+                        </a>
+                    </li>
+                </ul>
+            </div><!--//event_wrap-->
+        </div><!--//event-->
+        <div class="early">
+            <div class="early_wrap">
+                <h2 class="tit">얼리버드</h2>
+                <h3>먼저 참여하는 분들께 드리는 얼리버드 혜택</h3>
+                <ul class="early_list">
+                    <li>
+                        <a href="#">
+                            <div class="banner_img"><img src="static/images/main_pd5.jpg" alt="상품"></div>
+                            <div class="banner_txt">
+                                <strong>[김을 닮은 김펭귄]의 따땃한 하루를 위한 주문~ 바삭바삭 즐거워져라!</strong>
+                                <span class="kate">캐릭터&middot;굿즈</span>
+                            </div>
+                            <div class="banner_txt_sub">
+                                <strong>SET1</strong>
+                                <strong>무릎담요 1개, 스마트톡 1개, 서비스 굿즈(스티커 1개)</strong>
+                                <span>35,000원</span>
+                            </div>
+                            <a href="" class="buy_now">지금 구매하기</a>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="banner_img"><img src="static/images/main_pd5.jpg" alt="상품"></div>
+                            <div class="banner_txt">
+                                <strong>[김을 닮은 김펭귄]의 따땃한 하루를 위한 주문~ 바삭바삭 즐거워져라!</strong>
+                                <span class="kate">캐릭터&middot;굿즈</span>
+                            </div>
+                            <div class="banner_txt_sub">
+                                <strong>SET1</strong>
+                                <strong>무릎담요 1개, 스마트톡 1개, 서비스 굿즈(스티커 1개)</strong>
+                                <span>35,000원</span>
+                            </div>
+                            <a href="" class="buy_now">지금 구매하기</a>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="banner_img"><img src="static/images/main_pd5.jpg" alt="상품"></div>
+                            <div class="banner_txt">
+                                <strong>[김을 닮은 김펭귄]의 따땃한 하루를 위한 주문~ 바삭바삭 즐거워져라!</strong>
+                                <span class="kate">캐릭터&middot;굿즈</span>
+                            </div>
+                            <div class="banner_txt_sub">
+                                <strong>SET1</strong>
+                                <strong>무릎담요 1개, 스마트톡 1개, 서비스 굿즈(스티커 1개)</strong>
+                                <span>35,000원</span>
+                            </div>
+                            <a href="" class="buy_now">지금 구매하기</a>
+                        </a>
+                    </li>
+                </ul>
+            </div><!--//early_wrap-->
+        </div><!--//early-->
+        <div class="theme">
+            <div class="theme_wrap">
+                <h2 class="tit">기획전</h2>
+                <ul class="theme_list">
+                    <li>
+                        <div><img src="static/images/tmp_theme_main.jpg" alt=""></div>
+                        <strong>사람과 자연을 생각한 착한 상품</strong>
+                        <ul class="theme_pd_list">
+                            <li>
+                                <a href="">
+                                    <div class="theme_txt">실속! 제주 감성을 가득 담은 제주 여행 키트(feat.일상)</div>
+                                    <div class="theme_img"><img src="static/images/tmp_theme_thumnail.jpg" alt=""></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="theme_txt">실속! 제주 감성을 가득 담은 제주 여행 키트(feat.일상)</div>
+                                    <div class="theme_img"><img src="static/images/tmp_theme_thumnail.jpg" alt=""></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="theme_txt">실속! 제주 감성을 가득 담은 제주 여행 키트(feat.일상)</div>
+                                    <div class="theme_img"><img src="static/images/tmp_theme_thumnail.jpg" alt=""></div>
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="" class="theme_view">더보기</a>
+                    </li>
+                    <li>
+                        <div><img src="static/images/tmp_theme_main.jpg" alt=""></div>
+                        <strong>사람과 자연을 생각한 착한 상품</strong>
+                        <ul class="theme_pd_list">
+                            <li>
+                                <a href="">
+                                    <div class="theme_txt">실속! 제주 감성을 가득 담은 제주 여행 키트(feat.일상)</div>
+                                    <div class="theme_img"><img src="static/images/tmp_theme_thumnail.jpg" alt=""></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="theme_txt">실속! 제주 감성을 가득 담은 제주 여행 키트(feat.일상)</div>
+                                    <div class="theme_img"><img src="static/images/tmp_theme_thumnail.jpg" alt=""></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="theme_txt">실속! 제주 감성을 가득 담은 제주 여행 키트(feat.일상)</div>
+                                    <div class="theme_img"><img src="static/images/tmp_theme_thumnail.jpg" alt=""></div>
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="" class="theme_view">더보기</a>
+                    </li>
+                    <li>
+                        <div><img src="static/images/tmp_theme_main.jpg" alt=""></div>
+                        <strong>사람과 자연을 생각한 착한 상품</strong>
+                        <ul class="theme_pd_list">
+                            <li>
+                                <a href="">
+                                    <div class="theme_txt">실속! 제주 감성을 가득 담은 제주 여행 키트(feat.일상)</div>
+                                    <div class="theme_img"><img src="static/images/tmp_theme_thumnail.jpg" alt=""></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="theme_txt">실속! 제주 감성을 가득 담은 제주 여행 키트(feat.일상)</div>
+                                    <div class="theme_img"><img src="static/images/tmp_theme_thumnail.jpg" alt=""></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="theme_txt">실속! 제주 감성을 가득 담은 제주 여행 키트(feat.일상)</div>
+                                    <div class="theme_img"><img src="static/images/tmp_theme_thumnail.jpg" alt=""></div>
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="" class="theme_view">더보기</a>
+                    </li>
+                </ul><!--//theme_list-->
+            </div><!--//theme_wrap-->
+        </div><!--//theme-->
+
     </div><!-- //container -->
     <!-- footer -->
     <jsp:include page="/WEB-INF/jsp/inc/footer.jsp"/>

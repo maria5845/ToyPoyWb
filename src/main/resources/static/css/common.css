@@ -17,14 +17,14 @@ body {  min-width: 1260px;
     color: #000;
     word-break: break-all;}
 a {text-decoration: none; color: inherit;}
-img {width: 100%;}
+img {width: 100%; vertical-align: bottom;}
 .clear:after{content: '';display: block; clear: both;}
 .blind { position: absolute; width: 1px; height: 1px; clip: rect(0 0 0 0); overflow: hidden; }
 .badge_best {display:block; position: absolute; top: 0; right: 0; width: 40px; height: 40px; line-height: 40px; background: var(--yellow); color: #fff; text-align: center;}
 .fb {font-weight: 600;}
 .color_g {color: var(--gray);}
 /* 공통 */
-h2.tit {font-size: 30px; line-height: 40px; text-align: center}
+h2.tit {font-size: 30px; line-height: 40px; text-align:left; }
 .pd_name { font-size: 16px; padding: 16px 0 30px;}
 .pd_price { font-size: 19px; font-weight: 600;}
 .add_cart {position:absolute; display:block; width: 30px; height: 30px; bottom:0; right:10px; background: url(../images/main/ico_cart.png) no-repeat 0 0 / contain;}
