@@ -488,7 +488,50 @@
                 </ul><!--//theme_list-->
             </div><!--//theme_wrap-->
         </div><!--//theme-->
-
+        <div class="new_arrive">
+            <div class="new_arrive_wrap">
+                <h2 class="tit">오늘들어온 따끈따끈한 신상</h2>
+                <a href="#" class="btn_more">더보기 &rsaquo;</a>
+                <ul class="new_arrive_list">
+                    <li>
+                        <a href="#">
+                            <img src="static/images/main_pd3.png" alt="상품">
+                            <p>프리저브드플라워 미니꽃다발 플라워박스+유리병편지 카드</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="static/images/main_pd3.png" alt="상품">
+                            <p>프리저브드플라워 미니꽃다발 플라워박스+유리병편지 카드</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="static/images/main_pd3.png" alt="상품">
+                            <p>프리저브드플라워 미니꽃다발 플라워박스+유리병편지 카드</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="static/images/main_pd.jpg" alt="상품">
+                            <p>크리스마스 선물 조명 장식 용품 전구 인테리어 무드등 프로모션</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="static/images/main_pd.jpg" alt="상품">
+                            <p>크리스마스 선물 조명 장식 용품 전구 인테리어 무드등 프로모션</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="static/images/main_pd.jpg" alt="상품">
+                            <p>크리스마스 선물 조명 장식 용품 전구 인테리어 무드등 프로모션</p>
+                        </a>
+                    </li>
+                </ul><!--//new_arrive_list-->
+            </div><!-- //new_arrive_wrap-->
+        </div><!-- //new_arrive-->
     </div><!-- //container -->
     <!-- footer -->
     <jsp:include page="/WEB-INF/jsp/inc/footer.jsp"/>

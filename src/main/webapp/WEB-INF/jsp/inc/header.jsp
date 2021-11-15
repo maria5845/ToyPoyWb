@@ -25,6 +25,7 @@
       <li><a href="<%=request.getContextPath()%>/login.do" class="login">로그인</a></li>
       <li><a href="#">마이페이지</a></li>
       <li><a href="#">장바구니</a></li>
+      <li style="display: none"><a href="#">관리자 페이지</a></li>
     </ul>
   </div>
 </header>

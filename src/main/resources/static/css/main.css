@@ -75,3 +75,8 @@ h2.tit {font-weight: bold; font-size: 24px;}
 .theme_pd_list li a{display: flex; justify-content: space-between;}
 .theme_pd_list .theme_txt {width:60%; }
 .theme_view {display:block; padding:10px 0; text-align: center; font-size: 17px; border-top: 1px solid var(--lgray);}
+
+.new_arrive_wrap {position:relative; width: 1280px; margin: 50px auto;}
+.new_arrive_list {display: flex; margin-top: 20px;}
+.new_arrive_list li {width:180px; margin: 0 15px;}
+.new_arrive_list li p {overflow: hidden; text-overflow: ellipsis; display: -webkit-box; white-space: normal; -webkit-line-clamp: 2; -webkit-box-orient: vertical; width: 100%; height: auto; overflow-wrap: break-word;
