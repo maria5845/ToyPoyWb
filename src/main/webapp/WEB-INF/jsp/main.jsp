@@ -319,6 +319,7 @@
         </div><!-- //user_choice -->
         <div class="event">
             <div class="event_wrap">
+                <h2 class="tit">이벤트</h2>
                 <ul class="event_list">
                     <li>
                         <a href="#">
@@ -532,6 +533,14 @@
                 </ul><!--//new_arrive_list-->
             </div><!-- //new_arrive_wrap-->
         </div><!-- //new_arrive-->
+        <div class="event_banner">
+            <div class="event_banner_wrap">
+                <div class="bg"></div>
+                <h2>노란에서 선물보내기</h2>
+                <p>당신의 소중한 사람에게 선물을 보내세요.</p>
+                <a href="#">바로가기</a>
+            </div><!-- //event_banner_wrap-->
+        </div><!-- //event_banner-->
     </div><!-- //container -->
     <!-- footer -->
     <jsp:include page="/WEB-INF/jsp/inc/footer.jsp"/>

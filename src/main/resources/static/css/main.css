@@ -1,6 +1,6 @@
 @charset "utf-8";
 /*공통*/
-h2.tit {font-weight: bold; font-size: 24px;}
+h2.tit {font-weight: bold; font-size: 26px;}
 .btn_more {display:block; position: absolute; width:100px; height:32px; top: 0; right:0; line-height: 32px; text-align: center; border: 1px solid var(--lgray);}
 
 /*메인슬라이드*/
@@ -12,10 +12,11 @@ h2.tit {font-weight: bold; font-size: 24px;}
 .how_pd {position:relative; width: 854px; border-right: 1px solid var(--lgray); padding-right: 80px; box-sizing: border-box;}
 .how_pd .btn_more {right:30px;}
 .how_pd ul {display: flex; flex-flow: row wrap; justify-content: space-between;}
-.how_pd ul li {position:relative; width: 200px; margin-top: 30px;}
+.how_pd ul li {width: 200px; margin-top: 30px;}
+.how_pd .pd_cart {position: relative;}
 .how_pd .pd_cart button {border: none; background: none; cursor: pointer; width: 36px; position: absolute;}
-.how_pd .pd_cart .btn_cart{bottom: -6px; right: 48px;}
-.how_pd .pd_cart .btn_like{bottom: -6px; right: 8px;}
+.how_pd .pd_cart .btn_cart{bottom: -4px; right: 48px;}
+.how_pd .pd_cart .btn_like{bottom: -4px; right: 8px;}
 .sale_per {position:absolute; width: 44px; height: 44px; line-height: 44px; top:0; left: 0; background:#fff195; box-shadow:0 2px 1px rgb(0 0 0 / 17%); : #000; font-size:14px; text-align: center;}
 .ico_per {font-size: 12px; padding-left: 4px;}
 .lank {width: 426px; padding-left:60px; box-sizing: border-box; }
@@ -46,7 +47,7 @@ h2.tit {font-weight: bold; font-size: 24px;}
 .choice_event {flex-grow: 2;}
 
 .event_wrap {position:relative; width: 1280px; margin: 50px auto;}
-.event_list {display: flex; justify-content: center; align-items: center; width:100%; }
+.event_list {display: flex; justify-content: center; align-items: center; width:100%; margin-top: 15px; }
 .event_list li:nth-child(2) {margin: 0 40px;}
 .event_list li {position:relative; border: 1px solid var(--lgray);}
 .event_list .banner_txt {padding:12px 16px;}
@@ -76,7 +77,15 @@ h2.tit {font-weight: bold; font-size: 24px;}
 .theme_pd_list .theme_txt {width:60%; }
 .theme_view {display:block; padding:10px 0; text-align: center; font-size: 17px; border-top: 1px solid var(--lgray);}
 
-.new_arrive_wrap {position:relative; width: 1280px; margin: 50px auto;}
+.new_arrive {border-bottom: 1px solid var(--lgray);}
+.new_arrive_wrap {position:relative; width: 1280px; margin: 50px auto; }
 .new_arrive_list {display: flex; margin-top: 20px;}
 .new_arrive_list li {width:180px; margin: 0 15px;}
-.new_arrive_list li p {overflow: hidden; text-overflow: ellipsis; display: -webkit-box; white-space: normal; -webkit-line-clamp: 2; -webkit-box-orient: vertical; width: 100%; height: auto; overflow-wrap: break-word;
+.new_arrive_list li p {overflow: hidden; text-overflow: ellipsis; display: -webkit-box; white-space: normal; -webkit-line-clamp: 2; -webkit-box-orient: vertical; width: 100%; height: auto; overflow-wrap: break-word;}
+
+.event_banner_wrap {position:relative; width: 1280px; height: 280px; padding:80px 0; margin: 60px auto 120px; background: rgba(255,255,255,.5) url(../images/tmp_banner_bg2.png) no-repeat 50% 0 / cover; box-sizing: border-box; color: #fff; z-index: 10;}
+.event_banner_wrap .bg{position: absolute; top:0; left: 50%; transform: translateX(-50%); background-color:rgba(0, 0, 0, 0.3); width:1280px; height:280px;}
+.event_banner_wrap h2 {font-size: 40px; font-weight: bold; text-align: center;}
+.event_banner_wrap p {font-size: 20px; text-align: center; margin-top:30px;}
+.event_banner_wrap a {display:block; width:170px; height: 56px; margin: 30px auto 0; line-height: 56px; background: var(--yellow); font-size:20px; text-align: center; border-radius: 10px; }
+.event_banner_wrap h2,p,a {position: relative; z-index: 100;}
