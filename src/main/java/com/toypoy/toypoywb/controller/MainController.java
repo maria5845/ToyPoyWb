@@ -22,7 +22,7 @@ public class MainController {
 
     private static final Logger logger = LogManager.getLogger(MainController.class);
 
-    @RequestMapping(value = "/main.do", method = RequestMethod.GET)
+    @RequestMapping(value = {"/main.do","/"}, method = RequestMethod.GET)
     public String Main(Model model) {
         model.addAttribute("time", mainService.timeToString());
         return "main";
