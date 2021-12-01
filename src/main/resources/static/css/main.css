@@ -74,7 +74,7 @@ h2.tit {font-weight: bold; font-size: 26px;}
 .theme_pd_list {padding: 16px 16px 10px;}
 .theme_pd_list li {margin-bottom: 20px;}
 .theme_pd_list li a{display: flex; justify-content: space-between;}
-.theme_pd_list .theme_txt {width:60%; }
+.theme_pd_list .theme_txt {width:60%;}
 .theme_view {display:block; padding:10px 0; text-align: center; font-size: 17px; border-top: 1px solid var(--lgray);}
 
 .new_arrive {border-bottom: 1px solid var(--lgray);}

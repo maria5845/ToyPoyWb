@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+.best {padding: 50px;}
+.best .inner {width: 1200px; margin: 0 auto;}
+.best_depth ul, .best_gnb ul, .best_list_align ul {display: flex;}
+.best_gnb ul {justify-content: center;}
+.best_gnb ul li {width: 120px; height: 40px; line-height: 40px; text-align: center; border: 1px solid var(--gray); border-radius: 20px; margin:0 15px;}
+.best_gnb ul li:hover {background-color: var(--lgray);}
+.best_gnb ul li a {display: block; width: 100%; height: 100%;}
+
+.best_list_align ul {justify-content: flex-end; padding: 40px 0 20px; border-bottom: 1px solid var(--lgray);}
+.best_list_align ul li {position:relative; justify-content: flex-end; margin: 0 10px; color: var(--gray); font-size: 13px;}
+.best_list_align ul li~li:before {content: ''; position: absolute; display: block; width: 1px; height: 14px; background: var(--gray); top:50%; left: -10px; transform: translateY(-50%);}
+
+.best_item_wrap {display: flex; flex-flow: row wrap; justify-content: space-between;}
+.best_item_wrap li {position:relative; width: 200px; margin-top: 30px;}
+.best_item_wrap .pd_cart {position: relative;}
+.best_item_wrap .pd_cart button {border: none; background: none; cursor: pointer; width: 36px; position: absolute;}
+.best_item_wrap .pd_cart .btn_cart{bottom: -4px; right: 48px;}
+.best_item_wrap .pd_cart .btn_like{bottom: -4px; right: 8px;}
+.best_item_wrap .sale_per {position:absolute; width: 44px; height: 44px; line-height: 44px; top:0; left: 0; background:#fff195; box-shadow:0 2px 1px rgb(0 0 0 / 17%); : #000; font-size:14px; text-align: center;}
+.best_item_wrap .ico_per {font-size: 12px; padding-left: 4px;}
