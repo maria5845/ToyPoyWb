@@ -1,18 +1,12 @@
-package com.toypoy.toypoywb.admin;
+package com.toypoy.toypoywb.bos.member;
 
 
-import org.json.simple.JSONObject;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.File;
-import java.util.HashMap;
 
 @Controller
 public class BoardController {
@@ -34,8 +28,8 @@ public class BoardController {
         JSONObject json = new JSONObject();
 
         try {
-            String filePath = fileRootDir + "/board/boardList.json";
 
+            String filePath = fileRootDir + "/board/boardList.json";
             File file = new File(filePath);
 
             if(!file.exists()) {
@@ -53,8 +47,7 @@ public class BoardController {
             json.put("success", false);
             json.put("message", e.getMessage());
         }
-
-        return json.toString();
+            return json.toString();
     }
    */
 

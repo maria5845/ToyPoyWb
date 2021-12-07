@@ -1,6 +1,6 @@
 package com.toypoy.toypoywb;
 
-import com.toypoy.toypoywb.dao.MainDao;
+import com.toypoy.toypoywb.dao.main.MainDao;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

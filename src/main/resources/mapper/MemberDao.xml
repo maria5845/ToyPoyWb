@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd">
 
-<mapper namespace="com.toypoy.toypoywb.dao.MemberDao">
+<mapper namespace="com.toypoy.toypoywb.dao.member.MemberDao">
 
     <select id="getMemberCount" parameterType="java.util.HashMap" resultType="int">
         SELECT COUNT(*) FROM GT_MEMBER

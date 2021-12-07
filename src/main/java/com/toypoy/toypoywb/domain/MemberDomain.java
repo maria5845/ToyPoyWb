@@ -1,17 +1,16 @@
-package com.toypoy.toypoywb.vo;
+package com.toypoy.toypoywb.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
-import java.lang.reflect.Member;
 import java.util.Date;
 
 @AllArgsConstructor
 @EqualsAndHashCode
 @ToString
-public class MemberVO {
+public class MemberDomain {
     @Getter
     private int Member_seq;
     @Getter
@@ -48,7 +47,7 @@ public class MemberVO {
         return loginPassword.equals(Member_pw);
     }
 
-    public void update(MemberVO memberVO) {
+    public void update(MemberDomain memberVO) {
         this.Member_id = memberVO.getMember_id();
         this.Member_pw = memberVO.getMember_pw();
         this.Member_pw2 = memberVO.getMember_pw2();

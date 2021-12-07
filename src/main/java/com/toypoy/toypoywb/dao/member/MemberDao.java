@@ -1,4 +1,4 @@
-package com.toypoy.toypoywb.dao;
+package com.toypoy.toypoywb.dao.member;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
