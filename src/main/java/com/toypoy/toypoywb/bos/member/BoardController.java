@@ -16,7 +16,7 @@ public class BoardController {
     private String fileRootDir;
     */
 
-    @RequestMapping(value={"/admin/boardList.do"},method = {RequestMethod.GET})
+    @RequestMapping(value={"/bos/boardList.do"},method = {RequestMethod.GET})
     public String boardList(Model model, HttpServletRequest request) throws  Exception{
         model.addAttribute("board_id",request.getParameter("board_id"));
         return "admin/board_list";
