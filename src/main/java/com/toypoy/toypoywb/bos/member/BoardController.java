@@ -22,36 +22,4 @@ public class BoardController {
         return "admin/board_list";
     }
 
-    /*
-    @RequestMapping(value = "/board/getBoardList.do", method = {RequestMethod.POST, RequestMethod.GET})
-    public @ResponseBody String getBoardList(@RequestParam HashMap<String, Object> param) throws Exception {
-        JSONObject json = new JSONObject();
-
-        try {
-
-            String filePath = fileRootDir + "/board/boardList.json";
-            File file = new File(filePath);
-
-            if(!file.exists()) {
-                boardService.makeJson();
-            }
-
-            int total = boardService.getBoardCount(param);
-            List<Map<String, Object>> boardList = boardService.getBoardList(param);
-            json.put("total", total);
-            json.put("boardList", boardList);
-            json.put("list", FileUtils.readFileToString(file));
-            json.put("success", true);
-
-        }catch(Exception e) {
-            json.put("success", false);
-            json.put("message", e.getMessage());
-        }
-            return json.toString();
-    }
-   */
-
-
-
-
 }
